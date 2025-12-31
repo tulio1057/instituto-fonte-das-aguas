@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { Heart, Mail, MapPin, Phone, Instagram, Facebook } from "lucide-react";
-import { APP_LOGO } from "@/const";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +11,6 @@ export default function Footer() {
           {/* Logo e Descrição */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src={APP_LOGO} alt="Instituto Fonte das Águas" className="h-12 w-12" />
               <div>
                 <h3 className="font-display font-bold text-lg">Instituto Fonte das Águas</h3>
               </div>
