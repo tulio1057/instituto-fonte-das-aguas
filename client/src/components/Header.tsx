@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
-import { APP_LOGO } from "@/const";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
@@ -26,7 +25,6 @@ export default function Header() {
           {/* Logo */}
           <Link href="/">
             <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-              <img src={APP_LOGO} alt="Instituto Fonte das Águas" className="h-12 w-12" />
               <div className="hidden md:block">
                 <h1 className="text-lg font-display font-bold text-primary">Instituto Fonte das Águas</h1>
                 <p className="text-xs text-muted-foreground">Dignidade humana e justiça social</p>
