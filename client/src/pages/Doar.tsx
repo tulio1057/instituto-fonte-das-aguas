@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -6,10 +6,33 @@ import {
   Smartphone, Building2, HandHeart, ArrowRight 
 } from "lucide-react";
 import { toast } from "sonner";
+import QRCode from "qrcode";
 
 export default function Doar() {
   const [copied, setCopied] = useState(false);
+  const [qrCodeDataUrl, setQrCodeDataUrl] = useState<string>("");
   const pixKey = "52.250.050/0001-20";
+
+  useEffect(() => {
+    // Gerar QR code com a chave PIX
+    const generateQRCode = async () => {
+      try {
+        const dataUrl = await QRCode.toDataURL(pixKey, {
+          width: 256,
+          margin: 2,
+          color: {
+            dark: "#000000",
+            light: "#FFFFFF",
+          },
+        });
+        setQrCodeDataUrl(dataUrl);
+      } catch (err) {
+        console.error("Erro ao gerar QR code:", err);
+      }
+    };
+
+    generateQRCode();
+  }, [pixKey]);
 
   const copyPix = () => {
     navigator.clipboard.writeText(pixKey);
@@ -157,17 +180,25 @@ export default function Doar() {
 
                   <div className="flex justify-center">
                     <div className="bg-white p-6 rounded-2xl shadow-lg">
-                      <div className="w-64 h-64 bg-muted/30 rounded-lg flex items-center justify-center">
-                        <div className="text-center">
-                          <QrCode className="h-24 w-24 mx-auto mb-4 text-muted-foreground" />
-                          <p className="text-sm text-muted-foreground">
-                            QR Code PIX<br />
-                            <span className="text-xs">(Escaneie com seu app de banco)</span>
-                          </p>
-                        </div>
+                      <div className="w-64 h-64 rounded-lg flex items-center justify-center bg-white">
+                        {qrCodeDataUrl ? (
+                          <img 
+                            src={qrCodeDataUrl} 
+                            alt="QR Code PIX" 
+                            className="w-full h-full object-contain"
+                          />
+                        ) : (
+                          <div className="text-center">
+                            <QrCode className="h-24 w-24 mx-auto mb-4 text-muted-foreground animate-pulse" />
+                            <p className="text-sm text-muted-foreground">
+                              Gerando QR Code...
+                            </p>
+                          </div>
+                        )}
                       </div>
                       <p className="text-center text-xs text-muted-foreground mt-4">
-                        Ou copie a chave PIX ao lado
+                        Escaneie com seu app de banco<br />
+                        ou copie a chave PIX ao lado
                       </p>
                     </div>
                   </div>

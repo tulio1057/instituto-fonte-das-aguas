@@ -10,7 +10,7 @@ export default function Home() {
       <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+          style={{ backgroundImage: "url('/hero-bg.png')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
         </div>
@@ -82,7 +82,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <img 
-                src="/community.jpg" 
+                src="/community.png" 
                 alt="Comunidade Instituto Fonte das Águas" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />

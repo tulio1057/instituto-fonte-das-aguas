@@ -43,7 +43,7 @@ export default function Projetos() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
               <div>
                 <img 
-                  src="/vida-em-movimento.jpg" 
+                  src="/vida-em-movimento.png" 
                   alt="Projeto Vida em Movimento" 
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
@@ -204,7 +204,7 @@ export default function Projetos() {
               </div>
               <div className="order-1 lg:order-2">
                 <img 
-                  src="/mesa-da-vida.jpg" 
+                  src="/mesa-da-vida.png" 
                   alt="Projeto Mesa da Vida" 
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />

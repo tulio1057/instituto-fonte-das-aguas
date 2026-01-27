@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/Header";
@@ -17,22 +18,35 @@ import Transparencia from "./pages/Transparencia";
 import Capacitacoes from "./pages/Capacitacoes";
 import Simposio from "./pages/Simposio";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location]);
+
+  return null;
+}
+
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/sobre"} component={Sobre} />
-      <Route path={"/diretoria"} component={Diretoria} />
-      <Route path={"/voluntarios"} component={Voluntarios} />
-      <Route path={"/projetos"} component={Projetos} />
-      <Route path={"/doar"} component={Doar} />
-      <Route path={"/transparencia"} component={Transparencia} />
-      <Route path={"/capacitacoes"} component={Capacitacoes} />
-      <Route path={"/simposio"} component={Simposio} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/sobre"} component={Sobre} />
+        <Route path={"/diretoria"} component={Diretoria} />
+        <Route path={"/voluntarios"} component={Voluntarios} />
+        <Route path={"/projetos"} component={Projetos} />
+        <Route path={"/doar"} component={Doar} />
+        <Route path={"/transparencia"} component={Transparencia} />
+        <Route path={"/capacitacoes"} component={Capacitacoes} />
+        <Route path={"/simposio"} component={Simposio} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 

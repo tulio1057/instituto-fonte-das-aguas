@@ -28,15 +28,6 @@ export default function Footer() {
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
             </div>
           </div>
 
@@ -146,6 +137,17 @@ export default function Footer() {
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-1">
               Feito com <Heart className="h-4 w-4 text-red-500 fill-red-500" /> para transformar vidas
+            </p>
+          </div>
+          <div className="mt-4 pt-2 border-t">
+            <p className="text-xs text-muted-foreground text-center">
+              Produzido por{" "}
+              <a 
+                href="mailto:tulio.jdev@gmail.com" 
+                className="text-primary hover:underline transition-colors"
+              >
+                tulio.jdev
+              </a>
             </p>
           </div>
         </div>
