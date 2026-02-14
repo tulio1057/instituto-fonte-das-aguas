@@ -25,6 +25,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/">
             <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <img src="/public/logo.svg" alt="Instituto Fonte das Águas" className="h-14 w-14" />
               <div className="hidden md:block">
                 <h1 className="text-lg font-display font-bold text-primary">Instituto Fonte das Águas</h1>
                 <p className="text-xs text-muted-foreground">Dignidade humana e justiça social</p>
