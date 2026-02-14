@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { 
   Heart, Users, Calendar, Clock, BookOpen, Smile, 
-  CheckCircle2, ArrowRight, Phone, Mail 
+  CheckCircle2, ArrowRight, Phone, Mail, Target 
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -138,12 +138,12 @@ Mensagem: ${formData.mensagem}`;
                 <Card className="flex-1 border-none shadow-lg">
                   <CardContent className="p-6">
                     <h3 className="font-display text-xl font-bold mb-2 flex items-center gap-2">
-                      <Mail className="h-5 w-5 text-primary" />
-                      Inscrição
+                      <Heart className="h-5 w-5 text-primary" />
+                      Demonstração de Interesse
                     </h3>
                     <p className="text-muted-foreground">
-                      Preencha o formulário abaixo ou entre em contato pelo WhatsApp. 
-                      Conte-nos sobre você e suas áreas de interesse.
+                      Primeiramente, você demonstra seu interesse em ser voluntário através do 
+                      preenchimento de um formulário ou contato direto pelo WhatsApp.
                     </p>
                   </CardContent>
                 </Card>
@@ -159,12 +159,12 @@ Mensagem: ${formData.mensagem}`;
                 <Card className="flex-1 border-none shadow-lg">
                   <CardContent className="p-6">
                     <h3 className="font-display text-xl font-bold mb-2 flex items-center gap-2">
-                      <Phone className="h-5 w-5 text-secondary" />
-                      Entrevista
+                      <Mail className="h-5 w-5 text-secondary" />
+                      Preenchimento de Formulário
                     </h3>
                     <p className="text-muted-foreground">
-                      Realizamos uma conversa para conhecer melhor suas motivações, 
-                      habilidades e disponibilidade. Também apresentamos o instituto e nossos projetos.
+                      Você preenche o formulário com suas informações pessoais, habilidades, 
+                      experiências e áreas de interesse para nos conhecer melhor.
                     </p>
                   </CardContent>
                 </Card>
@@ -180,12 +180,12 @@ Mensagem: ${formData.mensagem}`;
                 <Card className="flex-1 border-none shadow-lg">
                   <CardContent className="p-6">
                     <h3 className="font-display text-xl font-bold mb-2 flex items-center gap-2">
-                      <BookOpen className="h-5 w-5 text-accent" />
-                      Capacitação
+                      <Users className="h-5 w-5 text-accent" />
+                      Entrevista com RH
                     </h3>
                     <p className="text-muted-foreground">
-                      Participe da nossa Capacitação de Voluntários, onde você aprenderá sobre 
-                      nossa missão, valores, projetos e as melhores práticas de atuação.
+                      Realizamos uma entrevista para conhecer suas motivações, disponibilidade e 
+                      habilidades. Também apresentamos o instituto, nossa missão e os projetos.
                     </p>
                   </CardContent>
                 </Card>
@@ -201,12 +201,54 @@ Mensagem: ${formData.mensagem}`;
                 <Card className="flex-1 border-none shadow-lg">
                   <CardContent className="p-6">
                     <h3 className="font-display text-xl font-bold mb-2 flex items-center gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-primary" />
-                      Atuação
+                      <BookOpen className="h-5 w-5 text-primary" />
+                      Participação de Capacitação
                     </h3>
                     <p className="text-muted-foreground">
-                      Comece a atuar no projeto escolhido! Você receberá acompanhamento contínuo 
-                      e terá reuniões regulares com a equipe.
+                      Você participa de uma sessão de capacitação onde aprender sobre nossa 
+                      missão, valores, protocolos, ética e boas práticas de voluntariado.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Passo 5 */}
+              <div className="flex gap-6 items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full gradient-secondary flex items-center justify-center text-white font-bold">
+                    5
+                  </div>
+                </div>
+                <Card className="flex-1 border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <h3 className="font-display text-xl font-bold mb-2 flex items-center gap-2">
+                      <Target className="h-5 w-5 text-secondary" />
+                      Direcionamento ao Projeto
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Você é direcionado ao projeto mais adequado às suas habilidades e interesses, 
+                      onde começará a colocar seus talentos em prática junto à nossa equipe.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Passo 6 */}
+              <div className="flex gap-6 items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold">
+                    6
+                  </div>
+                </div>
+                <Card className="flex-1 border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <h3 className="font-display text-xl font-bold mb-2 flex items-center gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-accent" />
+                      Assinatura de Termo de Adesão
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Você assina o Termo de Adesão, formalizando seu compromisso com a missão 
+                      do Instituto. Agora você é oficialmente um membro do nosso time!
                     </p>
                   </CardContent>
                 </Card>

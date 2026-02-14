@@ -1,43 +1,43 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Linkedin, User } from "lucide-react";
 
-// Dados da diretoria (podem ser atualizados conforme necessário)
+// Dados da diretoria
 const diretoria = [
   {
-    nome: "Presidente",
-    cargo: "Presidente do Instituto",
+    nome: "Felipe Rocha",
+    cargo: "Presidente",
     descricao: "Responsável pela gestão geral e direcionamento estratégico do instituto.",
     email: "presidencia@institutofontedasaguas.org",
   },
   {
-    nome: "Vice-Presidente",
+    nome: "Diogo Rian",
     cargo: "Vice-Presidente",
     descricao: "Auxilia na gestão e coordenação das atividades institucionais.",
     email: "vicepresidencia@institutofontedasaguas.org",
   },
   {
-    nome: "Diretor(a) Administrativo",
-    cargo: "Diretor(a) Administrativo",
-    descricao: "Gerencia os recursos administrativos e financeiros do instituto.",
-    email: "administrativo@institutofontedasaguas.org",
+    nome: "Kelly Furtuoso",
+    cargo: "1º Tesoureira",
+    descricao: "Gerencia os recursos financeiros e administrativos do instituto.",
+    email: "tesouraria1@institutofontedasaguas.org",
   },
   {
-    nome: "Diretor(a) de Projetos",
-    cargo: "Diretor(a) de Projetos",
-    descricao: "Coordena o desenvolvimento e execução dos projetos sociais.",
-    email: "projetos@institutofontedasaguas.org",
+    nome: "Rick Vieira",
+    cargo: "2º Tesoureiro",
+    descricao: "Auxilia na gestão e acompanhamento dos recursos financeiros.",
+    email: "tesouraria2@institutofontedasaguas.org",
   },
   {
-    nome: "Diretor(a) de Comunicação",
-    cargo: "Diretor(a) de Comunicação",
-    descricao: "Responsável pela comunicação institucional e relacionamento com a comunidade.",
-    email: "comunicacao@institutofontedasaguas.org",
+    nome: "Katiane Furtuoso",
+    cargo: "1º Secretária",
+    descricao: "Responsável pela documentação e registro das atividades institucionais.",
+    email: "secretaria1@institutofontedasaguas.org",
   },
   {
-    nome: "Conselho Fiscal",
-    cargo: "Membros do Conselho Fiscal",
-    descricao: "Fiscaliza as contas e a gestão financeira do instituto.",
-    email: "conselho@institutofontedasaguas.org",
+    nome: "Dayvisson Fontes",
+    cargo: "2º Secretário",
+    descricao: "Auxilia na secretaria e coordenação administrativa.",
+    email: "secretaria2@institutofontedasaguas.org",
   },
 ];
 

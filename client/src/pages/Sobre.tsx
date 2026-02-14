@@ -113,6 +113,20 @@ export default function Sobre() {
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-accent mt-2"></div>
                     <div>
+                      <p className="font-semibold text-foreground">Dignidade</p>
+                      <p className="text-sm text-muted-foreground">Reconhecimento do valor intrínseco de cada pessoa</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-accent mt-2"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Respeito</p>
+                      <p className="text-sm text-muted-foreground">Valorização das diferenças e autonomia de cada indivíduo</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-accent mt-2"></div>
+                    <div>
                       <p className="font-semibold text-foreground">Integridade</p>
                       <p className="text-sm text-muted-foreground">Transparência e ética em todas as nossas ações</p>
                     </div>
@@ -120,6 +134,118 @@ export default function Sobre() {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Marcos Históricos */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+                Marcos <span className="text-gradient">Históricos</span>
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Conheça os momentos importantes que marcaram a história do Instituto
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              {/* 2020 */}
+              <div className="flex gap-6">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center text-white font-bold mb-4">
+                    2020
+                  </div>
+                  <div className="hidden sm:block w-1 h-24 bg-primary/20"></div>
+                </div>
+                <Card className="flex-1 border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <h3 className="font-display text-xl font-bold mb-2 text-primary">Fundação do IFA</h3>
+                    <p className="text-muted-foreground">
+                      Fundação do Instituto Fonte das Águas e lançamento do Projeto Tatame da Vida, 
+                      marcando o início de nossa jornada de transformação social.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* 2021 */}
+              <div className="flex gap-6">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full gradient-secondary flex items-center justify-center text-white font-bold mb-4">
+                    2021
+                  </div>
+                  <div className="hidden sm:block w-1 h-24 bg-secondary/20"></div>
+                </div>
+                <Card className="flex-1 border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <h3 className="font-display text-xl font-bold mb-2 text-secondary">Projeto Vida em Movimento</h3>
+                    <p className="text-muted-foreground">
+                      Abertura do Projeto Vida em Movimento, ampliando nossas atividades com aulas 
+                      de Jiu-Jitsu, ballet, futebol e capoeira.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* 2022 */}
+              <div className="flex gap-6">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold mb-4">
+                    2022
+                  </div>
+                  <div className="hidden sm:block w-1 h-24 bg-accent/20"></div>
+                </div>
+                <Card className="flex-1 border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <h3 className="font-display text-xl font-bold mb-2 text-accent">Novos Projetos de Saúde e Educação</h3>
+                    <p className="text-muted-foreground">
+                      Abertura dos projetos "Visão da Vida" (exames de vista e óculos) e 
+                      "Fonte Educa" (reforço escolar e línguas estrangeiras).
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* 2023 */}
+              <div className="flex gap-6">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center text-white font-bold mb-4">
+                    2023
+                  </div>
+                  <div className="hidden sm:block w-1 h-24 bg-primary/20"></div>
+                </div>
+                <Card className="flex-1 border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <h3 className="font-display text-xl font-bold mb-2 text-primary">Expansão de Projetos</h3>
+                    <p className="text-muted-foreground">
+                      Realização do 2º Simpósio Infância Segura e lançamento do Projeto Boa Obra 
+                      para reforma de moradias.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* 2024 */}
+              <div className="flex gap-6">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-full gradient-secondary flex items-center justify-center text-white font-bold mb-4">
+                    2024
+                  </div>
+                </div>
+                <Card className="flex-1 border-none shadow-lg">
+                  <CardContent className="p-6">
+                    <h3 className="font-display text-xl font-bold mb-2 text-secondary">Marcos Importantes</h3>
+                    <p className="text-muted-foreground">
+                      Lançamento do Projeto Bola para Frente, abertura do CELEBRE, e realização 
+                      da 1ª Formatura do Instituto, celebrando 24 formandos das turmas de Jiu-Jitsu.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -169,23 +295,24 @@ export default function Sobre() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 mb-6">
                   <Home className="h-8 w-8 text-secondary" />
                 </div>
-                <h3 className="font-display text-xl font-bold mb-4">Famílias</h3>
+                <h3 className="font-display text-xl font-bold mb-4">Famílias do Bairro Industrial</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Expandimos nosso atendimento para incluir as famílias, fortalecendo vínculos e 
-                  promovendo o desenvolvimento integral de toda a unidade familiar.
+                  Nosso foco principal são famílias do Bairro Industrial com renda per capita de até 
+                  1,5 salário mínimo. Trabalhamos para garantir que crianças, adolescentes e suas 
+                  famílias tenham acesso a oportunidades de desenvolvimento e melhoria de qualidade de vida.
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                    Assistência alimentar (Mesa da Vida)
+                    Crianças e adolescentes em vulnerabilidade social
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                    Reforma de moradias (Projeto Boa Obra)
+                    Famílias com baixa renda
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                    Capacitação e orientação familiar
+                    Comunidades do Bairro Industrial
                   </li>
                 </ul>
               </CardContent>

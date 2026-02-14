@@ -151,7 +151,191 @@ export default function Projetos() {
         </div>
       </section>
 
-      {/* Mesa da Vida */}
+      {/* 4 Frentes de Atuação */}
+      <section className="section-padding bg-gradient-to-b from-muted/20 to-transparent">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Nossas 4 Frentes de <span className="text-gradient">Atuação</span>
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Conheça os pilares que sustentam nosso trabalho de transformação
+              </p>
+            </div>
+
+            {/* Frente 1 */}
+            <div className="mb-12">
+              <Card className="border-none shadow-lg">
+                <CardContent className="p-8 md:p-10">
+                  <div className="flex items-start gap-6 mb-6">
+                    <div className="w-16 h-16 rounded-full gradient-primary flex-shrink-0 flex items-center justify-center">
+                      <Heart className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-display text-2xl md:text-3xl font-bold mb-3 text-primary">
+                        Frente 1: Vínculos para o Bem-Estar
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        Projetos focados no fortalecimento de relações humanas e cuidado integral:
+                      </p>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="text-sm font-medium">Mamãe na Fonte</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="text-sm font-medium">CELEBRE</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="text-sm font-medium">Atendimento Nutricional</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="text-sm font-medium">Atendimento Psicológico</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="text-sm font-medium">Consultoria Jurídica</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Frente 2 */}
+            <div className="mb-12">
+              <Card className="border-none shadow-lg">
+                <CardContent className="p-8 md:p-10">
+                  <div className="flex items-start gap-6 mb-6">
+                    <div className="w-16 h-16 rounded-full gradient-secondary flex-shrink-0 flex items-center justify-center">
+                      <Users className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-display text-2xl md:text-3xl font-bold mb-3 text-secondary">
+                        Frente 2: Nutrição e Dignidade
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        Projetos dedicados à segurança alimentar e promoção da dignidade:
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0" />
+                        <span className="text-sm font-medium">Mesa da Vida - Segurança Alimentar e Partilha Comunitária</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Frente 3 */}
+            <div className="mb-12">
+              <Card className="border-none shadow-lg">
+                <CardContent className="p-8 md:p-10">
+                  <div className="flex items-start gap-6 mb-6">
+                    <div className="w-16 h-16 rounded-full bg-accent flex-shrink-0 flex items-center justify-center">
+                      <Target className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-display text-2xl md:text-3xl font-bold mb-3 text-accent">
+                        Frente 3: Inclusão pelo Esporte
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        Projetos que utilizam o esporte como ferramenta de transformação:
+                      </p>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0" />
+                          <span className="text-sm font-medium">Bola pra Frente</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0" />
+                          <span className="text-sm font-medium">Tatame da Vida</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0" />
+                          <span className="text-sm font-medium">Vida em Movimento</span>
+                        </div>
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-4">
+                        <strong>Modalidades:</strong> Jiu-Jitsu, Ballet, Futebol e Capoeira
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Frente 4 */}
+            <div className="mb-12">
+              <Card className="border-none shadow-lg">
+                <CardContent className="p-8 md:p-10">
+                  <div className="flex items-start gap-6 mb-6">
+                    <div className="w-16 h-16 rounded-full gradient-primary flex-shrink-0 flex items-center justify-center">
+                      <GraduationCap className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-display text-2xl md:text-3xl font-bold mb-3 text-primary">
+                        Frente 4: Proteja a Infância
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed mb-4">
+                        Projetos focados na proteção e conscientização sobre direitos infantis:
+                      </p>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="text-sm font-medium">Juntos pela Infância Segura</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="text-sm font-medium">Campanhas de Conscientização</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Educação e Saúde */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <Card className="border-none shadow-lg">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex-shrink-0 flex items-center justify-center">
+                      <GraduationCap className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-primary">Educação</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    <strong>Fonte Educa:</strong> Oferecemos reforço escolar, apoio pedagógico 
+                    e ensino de línguas estrangeiras para ampliar oportunidades de desenvolvimento.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none shadow-lg">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex-shrink-0 flex items-center justify-center">
+                      <Heart className="w-6 h-6 text-secondary" />
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-secondary">Saúde</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    <strong>Visão da Vida:</strong> Realização de exames de vista e distribuição 
+                    de óculos para garantir acesso à saúde visual.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="section-padding bg-muted/30" id="mesa-da-vida">
         <div className="container">
           <div className="max-w-6xl mx-auto">
