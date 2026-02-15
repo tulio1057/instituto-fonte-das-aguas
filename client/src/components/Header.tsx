@@ -31,7 +31,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/">
             <a className="flex items-center gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
-              <img src="/logo.svg" alt="Instituto Fonte das Águas" className="h-16 w-16 md:h-14 md:w-14" />
+              <img src="/logosemfundo.png" alt="Instituto Fonte das Águas" className="h-16 w-16 md:h-14 md:w-14" />
               <div className="hidden sm:flex flex-col">
                 <h1 className="text-base md:text-lg font-display font-bold text-primary leading-tight">Instituto Fonte das Águas</h1>
                 <p className="text-xs text-muted-foreground">Dignidade humana e justiça social</p>
