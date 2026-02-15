@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  GraduationCap, HandHeart, Home, Heart, Users, 
+  GraduationCap, Home, Heart, Users, 
   ArrowRight, CheckCircle2, Target
 } from "lucide-react";
 
@@ -166,68 +166,6 @@ export default function Projetos() {
                   </p>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-muted/30" id="mesa-da-vida">
-        <div className="container">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary font-semibold mb-4">
-                  <HandHeart className="h-5 w-5" />
-                  Segurança Alimentar
-                </div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                  Mesa da <span className="text-gradient">Vida</span>
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  O projeto Mesa da Vida nasceu da necessidade de combater a fome e promover a 
-                  segurança alimentar das famílias em situação de vulnerabilidade social. Levamos 
-                  refeições nutritivas e dignidade para dezenas de famílias da nossa comunidade.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Além da distribuição de alimentos, o projeto promove momentos de partilha e 
-                  fortalecimento de vínculos comunitários. Já realizamos ações especiais em obras 
-                  da cidade, levando não apenas alimento, mas também palavras de esperança e 
-                  conhecimento.
-                </p>
-
-                <div className="space-y-3 mb-8">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                    <p className="text-muted-foreground">Distribuição regular de refeições</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                    <p className="text-muted-foreground">Cestas básicas para famílias</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                    <p className="text-muted-foreground">Ações especiais em datas comemorativas</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                    <p className="text-muted-foreground">Orientação nutricional e alimentar</p>
-                  </div>
-                </div>
-
-                <Link href="/doar">
-                  <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white">
-                    Contribuir com o Mesa da Vida
-                    <Heart className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </div>
-              <div className="order-1 lg:order-2">
-                <img 
-                  src="/mesa-da-vida.png" 
-                  alt="Projeto Mesa da Vida" 
-                  className="rounded-2xl shadow-2xl w-full h-auto"
-                />
-              </div>
             </div>
           </div>
         </div>
