@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   GraduationCap, HandHeart, Home, Heart, Users, 
-  ArrowRight, CheckCircle2, Target 
+  ArrowRight, CheckCircle2, Target, Zap, BookOpen, Eye, Shield
 } from "lucide-react";
 
 export default function Projetos() {
@@ -336,6 +336,302 @@ export default function Projetos() {
           </div>
         </div>
       </section>
+
+      {/* Projetos Detalhados */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Conheça Nossos <span className="text-gradient">11 Projetos</span>
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Cada projeto contribui para diferentes dimensões da transformação social
+              </p>
+            </div>
+
+            {/* PROGRAMA 1: VÍNCULOS */}
+            <div className="mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold mb-8">
+                <Heart className="h-5 w-5" />
+                PROGRAMA 1: VÍNCULOS PARA O BEM-ESTAR
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Projeto: Mamãe na Fonte */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Mamãe na Fonte</h3>
+                      <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded">ODS 3</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Suporte integral para gestantes, lactantes e mães. Orientações nutricionais, 
+                      acompanhamento emocional e conexão com redes de assistência.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Saúde</span>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Maternidade</span>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Projeto: CELEBRE */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">CELEBRE</h3>
+                      <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded">ODS 5</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Celebração de feminilidade, empoderamento e cuidado. Atividades de estética, 
+                      saúde e valorização da mulher como protagonista.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Feminilidade</span>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Empoderamento</span>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Projeto: Atendimento Nutricional */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Atend. Nutricional</h3>
+                      <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded">ODS 3</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Avaliação nutricional, orientações alimentares e planos customizados 
+                      para saúde e bem-estar da comunidade.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Nutrição</span>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Saúde</span>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Projeto: Atendimento Psicológico */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Atend. Psicológico</h3>
+                      <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded">ODS 3</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Acompanhamento psicológico para crianças, adolescentes e famílias. 
+                      Espaço seguro para processamento emocional.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Saúde Mental</span>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Bem-estar</span>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Projeto: Consultoria Jurídica */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Consultoria Jurídica</h3>
+                      <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded">ODS 16</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Orientações jurídicas e apoio na documentação. Garantia de direitos 
+                      e cidadania para famílias vulneráveis.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Direitos</span>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Cidadania</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* PROGRAMA 2: NUTRIÇÃO */}
+            <div className="mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary font-bold mb-8">
+                <Zap className="h-5 w-5" />
+                PROGRAMA 2: NUTRIÇÃO E DIGNIDADE
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Projeto: Mesa da Vida */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition md:col-span-2 lg:col-span-1">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Mesa da Vida</h3>
+                      <span className="bg-secondary/20 text-secondary text-xs font-bold px-2 py-1 rounded">ODS 2</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Segurança alimentar e partilha comunitária. Distribuição de refeições 
+                      e cestas básicas para famílias em situação de vulnerabilidade.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">Alimentação</span>
+                      <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">Segurança Alimentar</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* PROGRAMA 3: ESPORTE */}
+            <div className="mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-bold mb-8">
+                <Target className="h-5 w-5" />
+                PROGRAMA 3: INCLUSÃO PELO ESPORTE
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Projeto: Bola pra Frente */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Bola pra Frente</h3>
+                      <span className="bg-accent/20 text-accent text-xs font-bold px-2 py-1 rounded">ODS 3</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Futebol como ferramenta de inclusão, disciplina e desenvolvimento. 
+                      Aulas para crianças e adolescentes do bairro.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-accent/10 text-accent px-2 py-1 rounded">Esporte</span>
+                      <span className="text-xs bg-accent/10 text-accent px-2 py-1 rounded">Futebol</span>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Projeto: Tatame da Vida */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Tatame da Vida</h3>
+                      <span className="bg-accent/20 text-accent text-xs font-bold px-2 py-1 rounded">ODS 3</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Jiu-Jitsu para desenvolvimento de disciplina, respeito e autoconfiança. 
+                      24 alunos formados em 2024.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-accent/10 text-accent px-2 py-1 rounded">Esporte</span>
+                      <span className="text-xs bg-accent/10 text-accent px-2 py-1 rounded">Jiu-Jitsu</span>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Projeto: Vida em Movimento */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Vida em Movimento</h3>
+                      <span className="bg-accent/20 text-accent text-xs font-bold px-2 py-1 rounded">ODS 4</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Programa integrado de esportes (Ballet, Capoeira), educação e desenvolvimento 
+                      pessoal de crianças e adolescentes.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-accent/10 text-accent px-2 py-1 rounded">Esporte</span>
+                      <span className="text-xs bg-accent/10 text-accent px-2 py-1 rounded">Educação</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* PROGRAMA 4: PROTEÇÃO */}
+            <div className="mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold mb-8">
+                <Shield className="h-5 w-5" />
+                PROGRAMA 4: PROTEJA A INFÂNCIA
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Projeto: Juntos pela Infância Segura */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Juntos pela Infância</h3>
+                      <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded">ODS 16</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Proteção integral da infância. Acompanhamento, orientação e rede de proteção 
+                      para crianças e adolescentes.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Proteção</span>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Infância</span>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Projeto: Campanhas de Conscientização */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Campanhas Conscient.</h3>
+                      <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded">ODS 5</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Campanhas educativas sobre direitos infantis, abuso, exploração e direitos 
+                      fundamentais de crianças.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Conscientização</span>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Direitos</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* EDUCAÇÃO E SAÚDE */}
+            <div className="mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Fonte Educa */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Fonte Educa</h3>
+                      <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded">ODS 4</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Reforço escolar, apoio pedagógico e ensino de línguas estrangeiras. 
+                      Ampliação de oportunidades educacionais.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Educação</span>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Reforço Escolar</span>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Visão da Vida */}
+                <Card className="border-none shadow-lg hover:shadow-xl transition">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="font-display text-lg font-bold">Visão da Vida</h3>
+                      <span className="bg-secondary/20 text-secondary text-xs font-bold px-2 py-1 rounded">ODS 3</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Saúde visual. Realização de exames de vista e distribuição de óculos 
+                      para acesso à saúde visual.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">Saúde</span>
+                      <span className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">Saúde Visual</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-muted/30" id="mesa-da-vida">
         <div className="container">
           <div className="max-w-6xl mx-auto">
@@ -397,78 +693,6 @@ export default function Projetos() {
           </div>
         </div>
       </section>
-
-      {/* Projeto Boa Obra 
-      <section className="section-padding" id="boa-obra">
-        <div className="container">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <img 
-                  src="/boa-obra.jpg" 
-                  alt="Projeto Boa Obra" 
-                  className="rounded-2xl shadow-2xl w-full h-auto"
-                />
-              </div>
-              <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-semibold mb-4">
-                  <Home className="h-5 w-5" />
-                  Moradia Digna
-                </div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-                  Projeto <span className="text-gradient">Boa Obra</span>
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  O Projeto Boa Obra é uma iniciativa de reforma e melhoria de moradias de famílias 
-                  em situação de vulnerabilidade. Acreditamos que toda família merece viver em um 
-                  lar digno, seguro e acolhedor.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Em parceria com empresas e voluntários, realizamos desde pequenos reparos até 
-                  reformas completas. Já realizamos a primeira visita técnica à casa do Sr. Alexandre, 
-                  nosso primeiro beneficiário, marcando o início dessa jornada de transformação.
-                </p>
-
-                <Card className="border-none shadow-lg bg-accent/5 mb-6">
-                  <CardContent className="p-6">
-                    <h4 className="font-display font-bold mb-4">Como Funciona:</h4>
-                    <ol className="space-y-3">
-                      <li className="flex gap-3">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white text-sm flex items-center justify-center font-bold">1</span>
-                        <span className="text-sm text-muted-foreground">Identificação de famílias em situação de vulnerabilidade</span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white text-sm flex items-center justify-center font-bold">2</span>
-                        <span className="text-sm text-muted-foreground">Visita técnica para levantamento das necessidades</span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white text-sm flex items-center justify-center font-bold">3</span>
-                        <span className="text-sm text-muted-foreground">Captação de recursos e materiais</span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent text-white text-sm flex items-center justify-center font-bold">4</span>
-                        <span className="text-sm text-muted-foreground">Execução da reforma com voluntários e profissionais</span>
-                      </li>
-                    </ol>
-                  </CardContent>
-                </Card>
-
-                <p className="text-sm text-muted-foreground mb-6">
-                  <strong>Parceiro Principal:</strong> Agradecemos à ColorText Tintas pelo apoio e 
-                  comprometimento com essa iniciativa transformadora.
-                </p>
-
-                <Link href="/doar">
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
-                    Apoiar o Projeto Boa Obra
-                    <Home className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>*/}
 
       {/* Call to Action Final */}
       <section className="section-padding bg-muted/30">

@@ -107,23 +107,22 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary" />
-                <span>Rua Adezinho da Costa Pinto, 149<br />Industrial, Aracaju - SE<br />CEP: 49065-010</span>
+                <span>Rua Adezinho da Costa Pinto, 149<br />Bairro Industrial, Aracaju - SE<br />CEP: 49065-010</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 flex-shrink-0 text-primary" />
-                <a href="tel:+5579996402118" className="hover:text-primary transition-colors">
-                  (79) 9 9640-2118
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 flex-shrink-0 text-primary" />
-                <a href="tel:+5579988727134" className="hover:text-primary transition-colors">
-                  (79) 9 8872-7134
+                <a href="tel:+5579991439647" className="hover:text-primary transition-colors">
+                  (79) 9 9143-9647
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 flex-shrink-0 text-primary" />
-                <span>PIX: 52.250.050/0001-20</span>
+                <a href="https://wa.me/5579996402118" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  WhatsApp
+                </a>
+              </li>
+              <li className="text-sm text-muted-foreground">
+                <strong>PIX:</strong> 52250050000120
               </li>
             </ul>
           </div>
