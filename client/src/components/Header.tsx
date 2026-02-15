@@ -4,15 +4,12 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Sobre", path: "/sobre" },
+  { name: "Início", path: "/" },
+  { name: "Sobre Nós", path: "/sobre" },
   { name: "Projetos", path: "/projetos" },
-  { name: "Voluntários", path: "/voluntarios" },
-  { name: "Diretoria", path: "/diretoria" },
-  { name: "Eventos", path: "/eventos" },
   { name: "Transparência", path: "/transparencia" },
-  { name: "Capacitações", path: "/capacitacoes" },
-  { name: "Simpósio", path: "/simposio" },
+  { name: "Como Ajudar", path: "/como-ajudar" },
+  { name: "Contato", path: "/contato" },
 ];
 
 export default function Header() {

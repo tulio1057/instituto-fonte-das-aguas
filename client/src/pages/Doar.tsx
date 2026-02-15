@@ -11,7 +11,8 @@ import QRCode from "qrcode";
 export default function Doar() {
   const [copied, setCopied] = useState(false);
   const [qrCodeDataUrl, setQrCodeDataUrl] = useState<string>("");
-  const pixKey = "52.250.050/0001-20";
+  const pixKey = "52250050000120";
+  const instituicao = "INSTITUTO FONTE DAS ÁGUAS-IFA";
 
   useEffect(() => {
     // Gerar QR code com a chave PIX

@@ -25,22 +25,36 @@ export default function Sobre() {
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-center">
               Nossa <span className="text-gradient">História</span>
             </h2>
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                O Instituto Fonte das Águas nasceu do sonho de transformar vidas através do amor, educação e 
-                justiça social. Localizado no bairro Industrial, em Aracaju, Sergipe, o instituto surgiu da 
-                necessidade de oferecer um espaço seguro e acolhedor para crianças, adolescentes e suas famílias 
-                em situação de vulnerabilidade social.
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                O Instituto Fonte das Águas nasceu em meio à pandemia da Covid-19, em um tempo marcado pela dor, 
+                pela incerteza e pela urgência do cuidado com o outro. Ele surge como fruto de um movimento da 
+                Graça Igreja Batista, que há mais de 45 anos desenvolve ações sociais na comunidade do Bairro Industrial, 
+                em Aracaju. Há cerca de 20 anos, a igreja é presidida pelo pastor Antônio Sampaio, que, diante dos 
+                desafios intensificados pela pandemia, decidiu fundar oficialmente o Instituto, em 2022, para ampliar 
+                e estruturar esse cuidado.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Desde o início, nossa missão sempre foi clara: promover a dignidade humana através de ações 
-                concretas que impactam positivamente a vida das pessoas. Acreditamos que cada indivíduo tem 
-                potencial para crescer, aprender e transformar sua realidade quando recebe o apoio adequado.
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                O nome Fonte das Águas carrega um significado profundo e simbólico. No Bairro Industrial, mais 
+                especificamente na Rua Manoel Preto, existem antigas fontes que, no passado, abasteciam a cidade de 
+                Aracaju quando ainda não havia uma rede pública de água. Assim como aquelas fontes foram essenciais 
+                para a vida da cidade, o Instituto nasce com o propósito de voltar a ser fonte de vida, esperança e 
+                dignidade para pessoas que, ao longo dos anos, viram seu território ser marginalizado e marcado por 
+                estigmas de violência e exclusão.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Ao longo dos anos, expandimos nossos projetos e ações, sempre mantendo o foco no desenvolvimento 
-                integral das pessoas. Hoje, contamos com uma equipe dedicada de 56 voluntários que trabalham 
-                incansavelmente para fazer a diferença na vida de 53 famílias e centenas de crianças e adolescentes.
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Mas o Bairro Industrial é muito mais do que os rótulos que lhe foram impostos. É um lugar de histórias, 
+                de famílias, de crianças cheias de sonhos e de pessoas com propósito. O Instituto Fonte das Águas existe 
+                para dar visibilidade a essa realidade, para afirmar que ali há vida pulsando e potencial sendo construído 
+                todos os dias.
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Estamos presentes para ser um espaço de acolhimento, proteção e segurança para crianças, adolescentes e 
+                suas famílias, fortalecendo vínculos, promovendo oportunidades e trabalhando, de forma contínua, para 
+                promover a dignidade humana e a justiça social.
               </p>
             </div>
           </div>

@@ -15,6 +15,8 @@ import Voluntarios from "./pages/Voluntarios";
 import Projetos from "./pages/Projetos";
 import Eventos from "./pages/Eventos";
 import Doar from "./pages/Doar";
+import ComoAjudar from "./pages/ComoAjudar";
+import Contato from "./pages/Contato";
 import Transparencia from "./pages/Transparencia";
 import Capacitacoes from "./pages/Capacitacoes";
 import Simposio from "./pages/Simposio";
@@ -40,7 +42,9 @@ function Router() {
         <Route path={"/voluntarios"} component={Voluntarios} />
         <Route path={"/projetos"} component={Projetos} />
         <Route path={"/eventos"} component={Eventos} />
+        <Route path={"/como-ajudar"} component={ComoAjudar} />
         <Route path={"/doar"} component={Doar} />
+        <Route path={"/contato"} component={Contato} />
         <Route path={"/transparencia"} component={Transparencia} />
         <Route path={"/capacitacoes"} component={Capacitacoes} />
         <Route path={"/simposio"} component={Simposio} />
