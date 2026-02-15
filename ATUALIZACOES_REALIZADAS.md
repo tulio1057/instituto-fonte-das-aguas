@@ -27,7 +27,6 @@
 - [x] Contexto histórico: fundação em 2022, Graça Igreja Batista há 45 anos
 - [x] Significado do nome explicado com referência às fontes antigas do Bairro Industrial
 - [x] Valores e Pilares atualizados
-- [x] Timeline/Marcos Históricos criados (2020-2025)
 - [x] Público-alvo especificado: Bairro Industrial, renda per capita até 1,5 salário mínimo
 - [x] Localização com endereço completo: Rua Adezinho da Costa Pinto, 149
 
@@ -54,7 +53,7 @@
   - Paz.coa (Páscoa)
   - Natal na Fonte (Dezembro)
   - Criança na Fonte (Anual)
-- [x] Seção "Na Mídia" para matérias e reportagens
+
 
 ### 6. **Navegação**
 - [x] Header atualizado com Logo SVG

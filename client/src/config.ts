@@ -44,6 +44,7 @@ export const ROUTES = {
   diretoria: "/diretoria",
   voluntarios: "/voluntarios",
   projetos: "/projetos",
+  frentes: "/frentes",
   eventos: "/eventos",
   comoAjudar: "/como-ajudar",
   doar: "/doar",
@@ -66,6 +67,7 @@ export const NAV_PRIMARY_ITEMS = [
 
 export const NAV_SECONDARY_ITEMS = [
   { name: "Diretoria", path: ROUTES.diretoria },
+  { name: "Frentes", path: ROUTES.frentes },
   { name: "Eventos", path: ROUTES.eventos },
   { name: "Voluntários", path: ROUTES.voluntarios },
   { name: "Capacitações", path: ROUTES.capacitacoes },

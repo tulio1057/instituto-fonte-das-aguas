@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
   FileText, Download, Eye, CheckCircle2, 
-  TrendingUp, Users, DollarSign, Calendar 
+  Users, Calendar 
 } from "lucide-react";
 
 export default function Transparencia() {
@@ -37,13 +37,6 @@ export default function Transparencia() {
       status: "Disponível",
     },
   ];
-
-  const indicadores2024 = {
-    totalDoacoes: "R$ 150.000,00",
-    familiasAtendidas: 53,
-    voluntariosAtivos: 56,
-    projetosAtivos: 5,
-  };
 
   return (
     <div className="min-h-screen">
@@ -111,72 +104,6 @@ export default function Transparencia() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Indicadores 2024 */}
-      <section className="section-padding bg-muted/30">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                Indicadores <span className="text-gradient">2024</span>
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Principais números do nosso impacto social
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                    <DollarSign className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-display text-3xl font-bold text-primary mb-2">
-                    {indicadores2024.totalDoacoes}
-                  </h3>
-                  <p className="text-sm text-muted-foreground font-medium">Total de Doações</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 mb-4">
-                    <Users className="h-6 w-6 text-secondary" />
-                  </div>
-                  <h3 className="font-display text-3xl font-bold text-secondary mb-2">
-                    {indicadores2024.familiasAtendidas}
-                  </h3>
-                  <p className="text-sm text-muted-foreground font-medium">Famílias Atendidas</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 mb-4">
-                    <Users className="h-6 w-6 text-accent" />
-                  </div>
-                  <h3 className="font-display text-3xl font-bold text-accent mb-2">
-                    {indicadores2024.voluntariosAtivos}
-                  </h3>
-                  <p className="text-sm text-muted-foreground font-medium">Voluntários Ativos</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                    <TrendingUp className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-display text-3xl font-bold text-primary mb-2">
-                    {indicadores2024.projetosAtivos}
-                  </h3>
-                  <p className="text-sm text-muted-foreground font-medium">Projetos Ativos</p>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>

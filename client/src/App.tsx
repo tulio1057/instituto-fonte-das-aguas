@@ -20,6 +20,7 @@ import Sobre from "./pages/Sobre";
 import Diretoria from "./pages/Diretoria";
 import Voluntarios from "./pages/Voluntarios";
 import Projetos from "./pages/Projetos";
+import Frentes from "./pages/Frentes";
 import Eventos from "./pages/Eventos";
 import Doar from "./pages/Doar";
 import ComoAjudar from "./pages/ComoAjudar";
@@ -67,6 +68,9 @@ function Router() {
 
         {/* Rota: Projetos */}
         <Route path={ROUTES.projetos} component={Projetos} />
+
+        {/* Rota: Frentes */}
+        <Route path={ROUTES.frentes} component={Frentes} />
 
         {/* Rota: Eventos */}
         <Route path={ROUTES.eventos} component={Eventos} />

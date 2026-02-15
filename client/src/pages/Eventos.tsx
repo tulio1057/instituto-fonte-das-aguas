@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Users, Heart, Share2, ArrowRight, Music, Gift, Smile } from "lucide-react";
+import { Calendar, Users, Heart, Music, Gift, Smile } from "lucide-react";
 
 export default function Eventos() {
   return (
@@ -132,112 +132,6 @@ export default function Eventos() {
                     </p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Na Mídia */}
-      <section className="section-padding bg-muted/30">
-        <div className="container">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-                Na <span className="text-gradient">Mídia</span>
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Acompanhe as principais matérias e reportagens sobre o Instituto Fonte das Águas
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {/* Placeholder para matérias */}
-              <Card className="border-none shadow-lg hover:shadow-xl transition-all cursor-pointer group">
-                <CardContent className="p-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6 group-hover:bg-primary group-hover:text-white transition-all">
-                    <Share2 className="h-8 w-8 text-primary group-hover:text-white" />
-                  </div>
-                  <h3 className="font-display text-xl font-bold mb-4">Matéria em Destaque 1</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Conheça a história de como o Instituto Fonte das Águas está transformando 
-                    vidas no bairro Industrial através de seus projetos inovadores.
-                  </p>
-                  <button className="text-primary font-semibold flex items-center gap-2 group/btn">
-                    Leia mais
-                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg hover:shadow-xl transition-all cursor-pointer group">
-                <CardContent className="p-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 mb-6 group-hover:bg-secondary group-hover:text-white transition-all">
-                    <Share2 className="h-8 w-8 text-secondary group-hover:text-white" />
-                  </div>
-                  <h3 className="font-display text-xl font-bold mb-4">Matéria em Destaque 2</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Reportagem especial sobre o Projeto Vida em Movimento e sua primeira formatura 
-                    com 24 alunos de Jiu-Jitsu formados em 2024.
-                  </p>
-                  <button className="text-secondary font-semibold flex items-center gap-2 group/btn">
-                    Leia mais
-                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg hover:shadow-xl transition-all cursor-pointer group">
-                <CardContent className="p-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-6 group-hover:bg-accent group-hover:text-white transition-all">
-                    <Share2 className="h-8 w-8 text-accent group-hover:text-white" />
-                  </div>
-                  <h3 className="font-display text-xl font-bold mb-4">Matéria em Destaque 3</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Conheça o impacto social do Projeto Mesa da Vida na segurança alimentar de 
-                    famílias vulneráveis no bairro Industrial.
-                  </p>
-                  <button className="text-accent font-semibold flex items-center gap-2 group/btn">
-                    Leia mais
-                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg hover:shadow-xl transition-all cursor-pointer group">
-                <CardContent className="p-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6 group-hover:bg-primary group-hover:text-white transition-all">
-                    <Share2 className="h-8 w-8 text-primary group-hover:text-white" />
-                  </div>
-                  <h3 className="font-display text-xl font-bold mb-4">Matéria em Destaque 4</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Histórias inspiradoras de crianças e adolescentes que transformaram suas vidas 
-                    através dos projetos e programas do Instituto.
-                  </p>
-                  <button className="text-primary font-semibold flex items-center gap-2 group/btn">
-                    Leia mais
-                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Partners/Parcerias */}
-            <Card className="border-none shadow-lg bg-gradient-to-r from-primary/5 to-secondary/5">
-              <CardContent className="p-12 text-center">
-                <h3 className="font-display text-2xl font-bold mb-6">Parcerias</h3>
-                <p className="text-muted-foreground leading-relaxed mb-8">
-                  O Instituto Fonte das Águas tem o apoio de diversos parceiros que acreditam em 
-                  nossa missão. Se sua empresa ou mídia também quer fazer parte dessa transformação, 
-                  entre em contato conosco.
-                </p>
-                <a 
-                  href="mailto:contato@institutofontedasaguas.org"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-                >
-                  Trabalhar Conosco
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
               </CardContent>
             </Card>
           </div>
