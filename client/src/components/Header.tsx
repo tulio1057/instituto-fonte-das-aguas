@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const primaryNavItems = [
   { name: "Início", path: "/" },
@@ -29,10 +30,10 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-              <img src="/public/logo.svg" alt="Instituto Fonte das Águas" className="h-14 w-14" />
-              <div className="hidden md:block">
-                <h1 className="text-lg font-display font-bold text-primary">Instituto Fonte das Águas</h1>
+            <a className="flex items-center gap-3 hover:opacity-80 transition-opacity flex-shrink-0">
+              <img src="/public/logo.svg" alt="Instituto Fonte das Águas" className="h-16 w-16 md:h-14 md:w-14" />
+              <div className="hidden sm:flex flex-col">
+                <h1 className="text-base md:text-lg font-display font-bold text-primary leading-tight">Instituto Fonte das Águas</h1>
                 <p className="text-xs text-muted-foreground">Dignidade humana e justiça social</p>
               </div>
             </a>
@@ -115,7 +116,8 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
+            <ThemeToggle />
             <Link href="/doar">
               <Button className="gradient-secondary text-white font-semibold">
                 Doar Agora
@@ -201,6 +203,13 @@ export default function Header() {
                   Doar Agora
                 </Button>
               </Link>
+              
+              <div className="pt-4 border-t mt-4 flex gap-2">
+                <ThemeToggle />
+                <span className="text-xs text-muted-foreground flex items-center">
+                  Alternar tema
+                </span>
+              </div>
             </div>
           </nav>
         )}
