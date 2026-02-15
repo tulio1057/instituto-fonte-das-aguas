@@ -126,6 +126,15 @@
   --sidebar-ring: oklch(0.488 0.243 264.376);
 }
 
+.dark {
+  /* Aumentar contraste no modo escuro */
+  --foreground: #ffffff;
+  --card-foreground: #ffffff;
+  --popover-foreground: #ffffff;
+  --muted-foreground: #e0e0e0;
+  --secondary-foreground: #ffffff;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -144,6 +153,22 @@
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
   }
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark p,
+.dark span,
+.dark a {
+  @apply text-white;
+}
+
+.dark .text-muted-foreground {
+  @apply text-gray-300;
 }
 
 @layer components {
