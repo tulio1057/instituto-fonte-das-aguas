@@ -54,7 +54,7 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
                   <Users className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="font-display text-3xl font-bold text-primary mb-2">~40</h3>
+                <h3 className="font-display text-3xl font-bold text-primary mb-2">40</h3>
                 <p className="text-sm text-muted-foreground font-medium">Voluntários Ativos</p>
               </CardContent>
             </Card>
@@ -64,7 +64,7 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary/10 mb-4">
                   <Heart className="h-7 w-7 text-secondary" />
                 </div>
-                <h3 className="font-display text-3xl font-bold text-secondary mb-2">~50</h3>
+                <h3 className="font-display text-3xl font-bold text-secondary mb-2">50</h3>
                 <p className="text-sm text-muted-foreground font-medium">Famílias Assistidas</p>
               </CardContent>
             </Card>
