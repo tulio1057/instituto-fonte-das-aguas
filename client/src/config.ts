@@ -47,7 +47,6 @@ export const ROUTES = {
   projetoDetalhe: "/projetos/:id",
   eventos: "/eventos",
   comoAjudar: "/como-ajudar",
-  doar: "/doar",
   contato: "/contato",
   transparencia: "/transparencia",
   capacitacoes: "/capacitacoes",

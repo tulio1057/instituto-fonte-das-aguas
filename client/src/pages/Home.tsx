@@ -23,12 +23,12 @@ export default function Home() {
             Transformando vidas no Bairro Industrial por meio do amor, da educação e do cuidado com crianças, famílias e comunidades vulneráveis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-            <Link href="/doar">
+            <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="gradient-secondary text-white font-semibold text-lg px-8 py-6 hover:scale-105 transition-transform">
                 Faça sua Doação
                 <Heart className="ml-2 h-5 w-5 fill-white" />
               </Button>
-            </Link>
+            </a>
             <Link href="/voluntarios">
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6">
                 Seja Voluntário
@@ -341,12 +341,12 @@ export default function Home() {
                 <strong>Juntos pela dignidade humana</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/doar">
+                <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold">
                     Doe Agora
                     <Heart className="ml-2 h-5 w-5" />
                   </Button>
-                </Link>
+                </a>
                 <Link href="/voluntarios">
                   <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary">
                     Seja Voluntário

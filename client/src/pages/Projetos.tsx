@@ -209,12 +209,12 @@ export default function Projetos() {
                 Escolha como você quer contribuir e faça a diferença hoje mesmo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href={ROUTES.doar}>
+                <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold">
                     Fazer uma Doação
                     <Heart className="ml-2 h-5 w-5" />
                   </Button>
-                </Link>
+                </a>
                 <Link href={ROUTES.voluntarios}>
                   <Button
                     size="lg"

@@ -171,11 +171,11 @@ function MobileNav({ location, open, onClose }: MobileNavProps) {
         />
 
         {/* Botão Doar */}
-        <Link href={ROUTES.doar}>
+        <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
           <Button className="w-full gradient-secondary text-white font-semibold mt-2">
             Doar Agora
           </Button>
-        </Link>
+        </a>
 
         {/* Toggle de tema */}
         <div className="pt-4 border-t mt-4 flex gap-2">
@@ -233,11 +233,11 @@ export default function Header() {
           {/* Botões de ação (desktop) */}
           <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
-            <Link href={ROUTES.doar}>
+            <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
               <Button className="gradient-secondary text-white font-semibold">
                 Doar Agora
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Botão menu mobile */}

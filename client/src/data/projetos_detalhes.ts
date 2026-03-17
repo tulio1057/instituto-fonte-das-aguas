@@ -30,9 +30,8 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
       "Promoção do aleitamento materno"
     ],
     fotos: [
-      "https://images.unsplash.com/photo-1488521787991-ed7fe863a405?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+      "/mamaenafonte1.jpeg",
+      "/mamaenafonte2.jpeg"
     ],
     impacto: "Centenas de mães acompanhadas mensalmente com suporte contínuo.",
     icone: "Heart",
@@ -40,86 +39,22 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
   },
   {
     id: "celebre",
-    titulo: "CELEBRE",
-    descricaoCurta: "Celebração de feminilidade, empoderamento e cuidado com atividades de estética, saúde e valorização da mulher.",
-    descricaoLonga: "O projeto CELEBRE é um espaço de celebração e empoderamento feminino que promove autoestima, cuidado com a saúde e valorização da mulher como protagonista. Através de atividades de estética, workshops de bem-estar e rodas de conversa, cria um ambiente seguro para o desenvolvimento pessoal e social das mulheres da comunidade.",
+    titulo: "Aniversário Solidário",
+    descricaoCurta: "Celebração inclusiva e solidária de aniversários para crianças que têm poucos recursos, promovendo alegria, dignidade e pertencimento.",
+    descricaoLonga: "O projeto Aniversário Solidário celebra datas especiais de crianças da comunidade, garantindo que todas tenham uma festa memorável. Promove inclusão, dignidade e alegria através de celebrações acessíveis, criando momentos de pertencimento e confiança nas crianças e adolescentes.",
     objetivos: [
-      "Promover autoestima e confiança feminina",
-      "Oferecer atividades de estética e bem-estar",
-      "Criar espaço de fala e empoderamento",
-      "Abordar temas de saúde e sexualidade",
-      "Valorizar a mulher como agente de mudança"
+      "Celebrar aniversários de crianças de forma digna",
+      "Promover inclusão e pertencimento",
+      "Criar momentos de alegria e alegramento",
+      "Fortalecer autoestima e valorização pessoal",
+      "Mobilizar comunidade em ações solidárias"
     ],
     fotos: [
-      "https://images.unsplash.com/photo-1489749798305-4fea3ba63d60?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1531983200157-6c26b5ce36eb?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=600&fit=crop"
+      "/celebre1.jpeg",
+      "/celebre2.jpeg"
     ],
-    impacto: "Mais de 100 mulheres participantes com impacto significativo em autoestima.",
-    icone: "Sparkles",
-    frente: "vinculos-bem-estar"
-  },
-  {
-    id: "atendimento-nutricional",
-    titulo: "Atendimento Nutricional",
-    descricaoCurta: "Avaliação nutricional, orientações alimentares e planos customizados para saúde e bem-estar.",
-    descricaoLonga: "O projeto de Atendimento Nutricional oferece avaliações individualizadas, diagnóstico de estado nutricional e orientações alimentares personalizadas. Profissionais especializados trabalham com crianças, adolescentes, gestantes e famílias para promover hábitos saudáveis e prevenir doenças nutricionais.",
-    objetivos: [
-      "Avaliar estado nutricional de beneficiários",
-      "Elaborar planos alimentares customizados",
-      "Orientar sobre alimentação saudável",
-      "Prevenir desnutrição e doenças nutricionais",
-      "Educar famílias sobre nutrição"
-    ],
-    fotos: [
-      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1574484284002-952f3c37b937?w=800&h=600&fit=crop"
-    ],
-    impacto: "Centenas de avaliações nutricionais realizadas com melhoria significativa nos indicadores de saúde.",
-    icone: "Apple",
-    frente: "vinculos-bem-estar"
-  },
-  {
-    id: "atendimento-psicologico",
-    titulo: "Atendimento Psicológico",
-    descricaoCurta: "Acompanhamento psicológico para crianças, adolescentes e famílias como espaço seguro para processamento emocional.",
-    descricaoLonga: "O projeto oferece acompanhamento psicológico profissional em um espaço acolhedor e seguro. Através de sessões individuais e em grupo, atende crianças, adolescentes e famílias, promovendo saúde mental, resiliência e processamento de traumas.",
-    objetivos: [
-      "Oferecer espaço seguro para expressão emocional",
-      "Acompanhar crianças e adolescentes em desenvolvimento",
-      "Apoiar famílias em situações de vulnerabilidade",
-      "Identificar e intervir em traumas",
-      "Fortalecer vínculos e habilidades socioemocionais"
-    ],
-    fotos: [
-      "https://images.unsplash.com/photo-1516534775068-bb57b6a48e71?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1552508744-0d6aecfe1a1f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1620591092169-e7b06a1b21c9?w=800&h=600&fit=crop"
-    ],
-    impacto: "Dezenas de atendimentos mensais com significativa melhoria em saúde mental.",
-    icone: "Brain",
-    frente: "vinculos-bem-estar"
-  },
-  {
-    id: "consultoria-juridica",
-    titulo: "Consultoria Jurídica",
-    descricaoCurta: "Orientações jurídicas e apoio na documentação com garantia de direitos e cidadania.",
-    descricaoLonga: "O projeto de Consultoria Jurídica oferece orientações legais gratuitas e apoio para regularização de documentação. Visa garantir acesso a direitos fundamentais, cidadania plena e proteção legal para famílias vulneráveis.",
-    objetivos: [
-      "Orientar sobre direitos fundamentais",
-      "Auxiliar na regularização de documentação",
-      "Apoiar em questões de pensão e guarda",
-      "Orientar sobre direitos trabalhistas",
-      "Garantir acesso à justiça"
-    ],
-    fotos: [
-      "https://images.unsplash.com/photo-1526480802860-a206995ceba0?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1507537362392-54f4994424b4?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1516321318423-f06f70d504f0?w=800&h=600&fit=crop"
-    ],
-    impacto: "Centenas de orientações jurídicas fornecidas com sucesso na regularização.",
-    icone: "Scale",
+    impacto: "Centenas de crianças com aniversários celebrados dignamente e memoráveis.",
+    icone: "Gift",
     frente: "vinculos-bem-estar"
   },
   {
@@ -135,9 +70,8 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
       "Promover segurança alimentar sustentável"
     ],
     fotos: [
-      "https://images.unsplash.com/photo-1488521787991-ed7fe863a405?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1488521787991-ed7fe863a405?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1566241440228-c56103dba8e1?w=800&h=600&fit=crop"
+      "/mesadavida1.jpeg",
+      "/mesadavida2.jpeg"
     ],
     impacto: "Toneladas de alimentos distribuídos anualmente para famílias necessitadas.",
     icone: "Package",
@@ -156,9 +90,8 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
       "Estimular sonhos e perspectivas futuras"
     ],
     fotos: [
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1579999157595-84f79b6af7df?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1560708537-0fcab0de5f64?w=800&h=600&fit=crop"
+      "/futebol1.jpg",
+      "/futebol2.jpg"
     ],
     impacto: "Dezenas de crianças e adolescentes participando regularmente.",
     icone: "Zap",
@@ -177,9 +110,8 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
       "Formar alunos com certificação"
     ],
     fotos: [
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1549720365-8fb539306e20?w=800&h=600&fit=crop"
+      "/tatame1.jpeg",
+      "/tatame2.jpeg"
     ],
     impacto: "24 alunos formados em 2024 com certificação em jiu-jitsu.",
     icone: "Zap",
@@ -198,9 +130,8 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
       "Ampliar horizontes culturais"
     ],
     fotos: [
-      "https://images.unsplash.com/photo-1504942898657-b5c2b09d2e6f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1526401485004-46910557345b?w=800&h=600&fit=crop"
+      "/ballet.jpg",
+      "/ballet2.jpg"
     ],
     impacto: "Centenas de participantes nos programa artístico e esportivo.",
     icone: "Music",
@@ -219,9 +150,8 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
       "Orientar famílias e cuidadores"
     ],
     fotos: [
-      "https://images.unsplash.com/photo-1503228311503-e5500d963ad9?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1516627145497-ae6968895b2e?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop"
+      "/infancia (1).jpeg",
+      "/infancia (2).jpeg"
     ],
     impacto: "Centenas de crianças sob proteção integral e acompanhamento.",
     icone: "Shield",
@@ -240,9 +170,8 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
       "Ampliar conhecimento sobre legislação"
     ],
     fotos: [
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1516321318423-f06f70d504f0?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1552678206-52ff3d6e1b75?w=800&h=600&fit=crop"
+      "/conversa (1).jpeg",
+      "/conversa (2).jpeg"
     ],
     impacto: "Milhares de pessoas impactadas pelos campanhas de conscientização.",
     icone: "AlertCircle",
@@ -260,11 +189,7 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
       "Ampliar oportunidades educacionais",
       "Preparar para desafios futuros"
     ],
-    fotos: [
-      "https://images.unsplash.com/photo-1427504494785-a8f89f32c2e5?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&h=600&fit=crop"
-    ],
+    fotos: [],
     impacto: "Dezenas de alunos com melhoria comprovada em desempenho escolar.",
     icone: "BookOpen",
     frente: "vinculos-bem-estar"
@@ -282,9 +207,8 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
       "Garantir direito à saúde visual"
     ],
     fotos: [
-      "https://images.unsplash.com/photo-1525318897962-96cd6c08dc9d?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1527489377706-5bf97e608852?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1533886275381-c0073f0e82c2?w=800&h=600&fit=crop"
+      "/visaodavida1.jpeg",
+      "/visaodavida2.jpeg"
     ],
     impacto: "Centenas de pessoas com acesso a cuidado oftalmológico e óculos.",
     icone: "Eye",

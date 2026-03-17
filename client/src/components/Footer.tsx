@@ -83,9 +83,9 @@ export default function Footer() {
               <Link href="/voluntarios" className="px-3 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-xs font-medium text-center whitespace-nowrap">
                 Seja Voluntário
               </Link>
-              <Link href="/doar" className="px-3 py-2 border border-primary text-primary rounded-md hover:bg-primary/5 transition-colors text-xs font-medium text-center whitespace-nowrap">
+              <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer" className="px-3 py-2 border border-primary text-primary rounded-md hover:bg-primary/5 transition-colors text-xs font-medium text-center whitespace-nowrap inline-block">
                 Faça uma Doação
-              </Link>
+              </a>
             </div>
           </div>
 

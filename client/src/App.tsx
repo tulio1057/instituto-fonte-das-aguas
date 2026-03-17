@@ -22,7 +22,6 @@ import Voluntarios from "./pages/Voluntarios";
 import Projetos from "./pages/Projetos";
 import ProjetoDetalhe from "./pages/ProjetoDetalhe";
 import Eventos from "./pages/Eventos";
-import Doar from "./pages/Doar";
 import ComoAjudar from "./pages/ComoAjudar";
 import Contato from "./pages/Contato";
 import Transparencia from "./pages/Transparencia";
@@ -77,9 +76,6 @@ function Router() {
 
         {/* Rota: Como Ajudar */}
         <Route path={ROUTES.comoAjudar} component={ComoAjudar} />
-
-        {/* Rota: Doações */}
-        <Route path={ROUTES.doar} component={Doar} />
 
         {/* Rota: Contato */}
         <Route path={ROUTES.contato} component={Contato} />

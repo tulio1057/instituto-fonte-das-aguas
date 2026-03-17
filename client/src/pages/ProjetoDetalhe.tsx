@@ -155,7 +155,7 @@ export default function ProjetoDetalhe() {
                     </p>
 
                     <div className="space-y-3">
-                      <Link href={ROUTES.doar}>
+                      <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
                         <Button
                           size="lg"
                           className="w-full bg-primary hover:bg-primary/90 text-white"
@@ -163,7 +163,7 @@ export default function ProjetoDetalhe() {
                           <Heart className="mr-2 h-5 w-5" />
                           Fazer uma Doação
                         </Button>
-                      </Link>
+                      </a>
 
                       <Link href={ROUTES.voluntarios}>
                         <Button
@@ -226,7 +226,7 @@ export default function ProjetoDetalhe() {
                 conosco.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href={ROUTES.doar}>
+                <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
                   <Button
                     size="lg"
                     className="bg-white text-primary hover:bg-white/90 font-semibold"
@@ -234,7 +234,7 @@ export default function ProjetoDetalhe() {
                     <Heart className="mr-2 h-5 w-5" />
                     Fazer uma Doação
                   </Button>
-                </Link>
+                </a>
                 <Link href={ROUTES.voluntarios}>
                   <Button
                     size="lg"

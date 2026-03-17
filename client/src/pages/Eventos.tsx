@@ -157,12 +157,12 @@ export default function Eventos() {
                     <Users className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href="/doar">
+                <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary">
                     Faça uma Doação
                     <Heart className="ml-2 h-5 w-5" />
                   </Button>
-                </Link>
+                </a>
               </div>
             </CardContent>
           </Card>
