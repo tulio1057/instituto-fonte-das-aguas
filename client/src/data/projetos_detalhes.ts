@@ -39,9 +39,9 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
   },
   {
     id: "celebre",
-    titulo: "Aniversário Solidário",
+    titulo: "Celebre",
     descricaoCurta: "Celebração inclusiva e solidária de aniversários para crianças que têm poucos recursos, promovendo alegria, dignidade e pertencimento.",
-    descricaoLonga: "O projeto Aniversário Solidário celebra datas especiais de crianças da comunidade, garantindo que todas tenham uma festa memorável. Promove inclusão, dignidade e alegria através de celebrações acessíveis, criando momentos de pertencimento e confiança nas crianças e adolescentes.",
+    descricaoLonga: "O projeto Celebre celebra datas especiais de crianças da comunidade, garantindo que todas tenham uma festa memorável. Promove inclusão, dignidade e alegria através de celebrações acessíveis, criando momentos de pertencimento e confiança nas crianças e adolescentes.",
     objetivos: [
       "Celebrar aniversários de crianças de forma digna",
       "Promover inclusão e pertencimento",
