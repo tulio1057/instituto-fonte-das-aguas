@@ -38,7 +38,7 @@ function NavLink({ label, path, location, onClick }: NavLinkProps) {
 // ============================================================================
 // COMPONENTE: DesktopNav
 // ============================================================================
-// Navegação desktop com dropdown para itens secundários
+// Navegação desktop com menu vertical dropdown
 
 interface DesktopNavProps {
   location: string;
@@ -52,35 +52,45 @@ function DesktopNav({
   dropdownOpen,
 }: DesktopNavProps) {
   return (
-    <nav className="hidden lg:flex items-center gap-1">
-      {/* Itens de navegação primária */}
-      {NAV_PRIMARY_ITEMS.map((item) => (
-        <NavLink
-          key={item.path}
-          label={item.name}
-          path={item.path}
-          location={location}
-        />
-      ))}
-
-      {/* Dropdown para itens secundários */}
-      <div className="relative group">
+    <nav className="hidden lg:block">
+      <div className="relative">
+        {/* Botão Menu Principal */}
         <button
-          className="px-4 py-2 text-sm font-medium rounded-md transition-colors hover:bg-accent hover:text-accent-foreground text-foreground/80 flex items-center gap-1"
+          className="px-6 py-2 text-sm font-medium rounded-md transition-colors bg-primary text-white hover:bg-primary/90 flex items-center gap-2"
           onMouseEnter={() => onDropdownToggle(true)}
           onMouseLeave={() => onDropdownToggle(false)}
         >
           Institucional
-          <ChevronDown className="h-4 w-4" />
+          <ChevronDown 
+            className={`h-4 w-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
+          />
         </button>
 
-        {/* Menu dropdown */}
+        {/* Menu Dropdown Vertical */}
         {dropdownOpen && (
           <div
-            className="absolute top-full left-0 mt-0 bg-background border rounded-md shadow-lg py-2 min-w-48"
+            className="absolute top-full right-0 mt-2 bg-background border border-border rounded-md shadow-xl py-1 min-w-56 z-50"
             onMouseEnter={() => onDropdownToggle(true)}
             onMouseLeave={() => onDropdownToggle(false)}
           >
+            {/* Itens primários */}
+            {NAV_PRIMARY_ITEMS.map((item) => (
+              <NavLink
+                key={item.path}
+                label={item.name}
+                path={item.path}
+                location={location}
+              />
+            ))}
+
+            {/* Divisor */}
+            <div className="my-1 border-t"></div>
+
+            {/* Itens secundários com label */}
+            <div className="px-4 py-2 text-xs font-bold text-muted-foreground uppercase">
+              Institucional
+            </div>
+
             {NAV_SECONDARY_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
@@ -89,23 +99,26 @@ function DesktopNav({
                 location={location}
               />
             ))}
+
+            {/* Divisor */}
+            <div className="my-1 border-t"></div>
+
+            {/* Como Ajudar */}
+            <NavLink
+              label="Como Ajudar"
+              path={ROUTES.comoAjudar}
+              location={location}
+            />
+
+            {/* Contato */}
+            <NavLink
+              label="Contato"
+              path={ROUTES.contato}
+              location={location}
+            />
           </div>
         )}
       </div>
-
-      {/* Como Ajudar */}
-      <NavLink
-        label="Como Ajudar"
-        path={ROUTES.comoAjudar}
-        location={location}
-      />
-
-      {/* Contato */}
-      <NavLink
-        label="Contato"
-        path={ROUTES.contato}
-        location={location}
-      />
     </nav>
   );
 }

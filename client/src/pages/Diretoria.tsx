@@ -10,14 +10,14 @@ const diretoria = [
     email: "presidencia@institutofontedasaguas.org",
   },
   {
-    nome: "Diogo Rian",
+    nome: "Kelly Furtuoso",
     cargo: "Vice-Presidente",
     descricao: "Auxilia na gestão e coordenação das atividades institucionais.",
     email: "vicepresidencia@institutofontedasaguas.org",
   },
   {
-    nome: "Kelly Furtuoso",
-    cargo: "1º Tesoureira",
+    nome: "Diogo Rian",
+    cargo: "1º Tesoureiro",
     descricao: "Gerencia os recursos financeiros e administrativos do instituto.",
     email: "tesouraria1@institutofontedasaguas.org",
   },

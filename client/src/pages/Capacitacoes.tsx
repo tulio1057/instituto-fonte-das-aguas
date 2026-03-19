@@ -6,40 +6,7 @@ import {
 } from "lucide-react";
 
 export default function Capacitacoes() {
-  const capacitacoes = [
-    {
-      titulo: "Capacitação de Voluntários",
-      descricao: "Formação completa para novos voluntários do instituto, abordando nossa missão, valores, metodologias e práticas de atuação.",
-      duracao: "8 horas",
-      formato: "Presencial",
-      proxima: "A definir",
-      vagas: "Abertas",
-    },
-    {
-      titulo: "Educação Socioemocional",
-      descricao: "Curso para educadores e voluntários sobre desenvolvimento socioemocional de crianças e adolescentes.",
-      duracao: "12 horas",
-      formato: "Híbrido",
-      proxima: "A definir",
-      vagas: "Em breve",
-    },
-    {
-      titulo: "Gestão de Projetos Sociais",
-      descricao: "Capacitação em planejamento, execução e avaliação de projetos sociais, voltada para lideranças comunitárias.",
-      duracao: "16 horas",
-      formato: "Presencial",
-      proxima: "A definir",
-      vagas: "Em breve",
-    },
-    {
-      titulo: "Primeiros Socorros",
-      descricao: "Treinamento básico de primeiros socorros para voluntários que atuam diretamente com crianças e adolescentes.",
-      duracao: "6 horas",
-      formato: "Presencial",
-      proxima: "A definir",
-      vagas: "Em breve",
-    },
-  ];
+  const capacitacoes = [];
 
   return (
     <div className="min-h-screen">
@@ -125,63 +92,23 @@ export default function Capacitacoes() {
               </p>
             </div>
 
-            <div className="space-y-6">
-              {capacitacoes.map((capacitacao, index) => (
-                <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all">
-                  <CardContent className="p-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                      <div className="lg:col-span-2">
-                        <h3 className="font-display text-2xl font-bold mb-3">
-                          {capacitacao.titulo}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed mb-4">
-                          {capacitacao.descricao}
-                        </p>
-                        <div className="flex flex-wrap gap-4">
-                          <div className="flex items-center gap-2 text-sm">
-                            <Clock className="h-4 w-4 text-primary" />
-                            <span className="text-muted-foreground">
-                              <strong className="text-foreground">Duração:</strong> {capacitacao.duracao}
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-2 text-sm">
-                            <BookOpen className="h-4 w-4 text-secondary" />
-                            <span className="text-muted-foreground">
-                              <strong className="text-foreground">Formato:</strong> {capacitacao.formato}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex flex-col justify-between">
-                        <div className="space-y-3 mb-4">
-                          <div className="flex items-center gap-2 text-sm">
-                            <Calendar className="h-4 w-4 text-accent" />
-                            <span className="text-muted-foreground">
-                              <strong className="text-foreground">Próxima turma:</strong> {capacitacao.proxima}
-                            </span>
-                          </div>
-                          <div>
-                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${
-                              capacitacao.vagas === "Abertas" 
-                                ? "bg-green-100 text-green-700" 
-                                : "bg-yellow-100 text-yellow-700"
-                            }`}>
-                              {capacitacao.vagas}
-                            </span>
-                          </div>
-                        </div>
-                        <Button 
-                          variant={capacitacao.vagas === "Abertas" ? "default" : "outline"}
-                          disabled={capacitacao.vagas !== "Abertas"}
-                          className="w-full"
-                        >
-                          {capacitacao.vagas === "Abertas" ? "Inscrever-se" : "Em breve"}
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="flex items-center justify-center py-16">
+              <div className="text-center max-w-2xl">
+                <BookOpen className="h-16 w-16 text-muted-foreground mx-auto mb-4 opacity-50" />
+                <h3 className="font-display text-2xl font-bold mb-3">Nenhuma capacitação agendada no momento</h3>
+                <p className="text-muted-foreground mb-6">
+                  Estamos preparando novas capacitações para você. Fique atento às nossas redes sociais e entre em contato para saber quando as próximas turmas serão abertas!
+                </p>
+                <a
+                  href="https://wa.me/5579996402118?text=Olá! Gostaria de saber quando haverá próximas capacitações."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  Receber Notificação
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -20,20 +20,20 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
   {
     id: "mamae-na-fonte",
     titulo: "Mamãe na Fonte",
-    descricaoCurta: "Suporte integral para gestantes, lactantes e mães com orientações nutricionais e acompanhamento emocional.",
-    descricaoLonga: "O projeto Mamãe na Fonte oferece suporte integral para gestantes, lactantes e mães com acompanhamento nutricional, emocional e orientações para o desenvolvimento saudável de bebês e crianças. Através de uma abordagem humanizada, conecta as mães com redes de assistência, cuidado pré-natal e pós-natal.",
+    descricaoCurta: "Cuidado integral para mulheres em todas as fases da maternidade e da vida.",
+    descricaoLonga: "O projeto Mamãe na Fonte atua no cuidado integral de mulheres, oferecendo suporte físico, emocional e social para gestantes, lactantes e mães. Com uma abordagem humanizada, o projeto promove espaços de escuta, orientação e acolhimento, abordando temas essenciais como saúde mental, autocuidado e fortalecimento feminino. Além disso, conecta as participantes a redes de apoio e serviços que contribuem para uma vida mais digna e saudável.",
     objetivos: [
-      "Acompanhamento nutricional de gestantes e lactantes",
-      "Orientações e educação em saúde materna",
-      "Suporte emocional durante a maternidade",
-      "Conexão com redes de assistência social",
-      "Promoção do aleitamento materno"
+      "Promover palestras e encontros sobre saúde emocional, incluindo temas como ansiedade e depressão",
+      "Garantir acesso a exames de saúde íntima e ações preventivas voltadas à saúde da mulher",
+      "Oferecer suporte emocional e acolhimento em situações de vulnerabilidade, como luto e violência doméstica",
+      "Fortalecer vínculos e redes de apoio entre mulheres",
+      "Incentivar o cuidado integral, considerando corpo, mente e contexto social"
     ],
     fotos: [
       "/mamaenafonte1.jpeg",
       "/mamaenafonte2.jpeg"
     ],
-    impacto: "Centenas de mães acompanhadas mensalmente com suporte contínuo.",
+    impacto: "Mulheres acompanhadas de forma contínua, com acesso a cuidado, informação e acolhimento, promovendo transformação real em suas histórias e territórios.",
     icone: "Heart",
     frente: "vinculos-bem-estar"
   },
@@ -120,20 +120,20 @@ export const PROJETOS_DETALHES: ProjetoDetalhe[] = [
   {
     id: "vida-em-movimento",
     titulo: "Vida em Movimento",
-    descricaoCurta: "Programa integrado de esportes (Ballet, Capoeira) e desenvolvimento pessoal de crianças e adolescentes.",
-    descricaoLonga: "O projeto Vida em Movimento oferece um programa integrado combinando ballet, capoeira, educação e desenvolvimento pessoal. Cria um espaço de expressão artística, movimento corporal e crescimento integral.",
+    descricaoCurta: "Programa de dança e expressão corporal para o desenvolvimento de crianças e adolescentes.",
+    descricaoLonga: "O projeto Vida em Movimento é dedicado à formação de crianças e adolescentes por meio da dança, com foco principal no ballet e em outros estilos musicais. A iniciativa promove um espaço de expressão artística, disciplina e desenvolvimento integral, utilizando o movimento como ferramenta de formação pessoal, sensibilidade cultural e fortalecimento da autoestima.",
     objetivos: [
-      "Oferecer aulas de ballet e capoeira",
-      "Promover expressão artística e corporal",
-      "Desenvolver coordenação e ritmo",
-      "Fortalecer autoconfiança através da arte",
-      "Ampliar horizontes culturais"
+      "Oferecer aulas de ballet e outros estilos de dança",
+      "Estimular a expressão corporal e artística",
+      "Desenvolver coordenação, ritmo e consciência corporal",
+      "Fortalecer a autoconfiança e a disciplina",
+      "Ampliar o repertório cultural por meio da dança"
     ],
     fotos: [
       "/ballet.jpg",
       "/ballet2.jpg"
     ],
-    impacto: "Centenas de participantes nos programa artístico e esportivo.",
+    impacto: "Crianças e adolescentes atendidos continuamente, desenvolvendo habilidades artísticas, emocionais e sociais por meio da dança.",
     icone: "Music",
     frente: "inclusao-esporte"
   },
