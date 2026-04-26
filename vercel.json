@@ -1,13 +1,5 @@
 {
-  "version": 2,
   "buildCommand": "pnpm vite build",
   "outputDirectory": "dist/public",
-  "installCommand": "pnpm install",
-  "routes": [
-    {
-      "src": "/[^.]+",
-      "dest": "/",
-      "status": 200
-    }
-  ]
+  "installCommand": "pnpm install"
 }
