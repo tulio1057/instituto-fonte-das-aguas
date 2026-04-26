@@ -2,7 +2,8 @@
   "buildCommand": "pnpm vite build",
   "outputDirectory": "dist/public",
   "installCommand": "pnpm install",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
