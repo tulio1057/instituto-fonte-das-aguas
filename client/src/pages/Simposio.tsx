@@ -323,7 +323,7 @@ export default function Simposio() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/5579991439647?text=Olá! Gostaria de me inscrever no Simpósio do Instituto Fonte das Águas."
+                  href="https://wa.me/5579991439647?text=Olá! Gostaria de me inscrever no Simpósio do Instituto Fonte das Águas.%0A%0AData: 16/05/2026%0AHorário: 14h às 19h30%0ALocal: Graça Igreja Batista - Rua Adezinho da Costa Pinto, 149, Bairro Industrial%0AEvento Gratuito com Certificado"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-white/90 transition-colors"
