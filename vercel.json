@@ -1,8 +1,13 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
+  "version": 2,
   "buildCommand": "pnpm vite build",
   "outputDirectory": "dist/public",
-  "installCommand": "pnpm install"
+  "installCommand": "pnpm install",
+  "routes": [
+    {
+      "src": "/[^.]+",
+      "dest": "/",
+      "status": 200
+    }
+  ]
 }
