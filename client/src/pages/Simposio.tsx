@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  Calendar, MapPin, Users, Clock, 
-  Mic, Award, Coffee, ArrowRight, CheckCircle2 
+import {
+  Calendar, MapPin, Users, Clock,
+  Mic, Award, Coffee, ArrowRight, CheckCircle2
 } from "lucide-react";
 
 export default function Simposio() {
@@ -26,52 +26,37 @@ export default function Simposio() {
 
   const programacao = [
     {
-      horario: "08:00 - 08:30",
-      atividade: "Credenciamento e Café de Boas-Vindas",
+      horario: "14:00 - 14:30",
+      atividade: "Credenciamento e Recepção",
       tipo: "coffee",
     },
     {
-      horario: "08:30 - 09:00",
+      horario: "14:30 - 15:00",
       atividade: "Abertura Oficial do Simpósio",
       tipo: "abertura",
     },
     {
-      horario: "09:00 - 10:30",
+      horario: "15:00 - 16:30",
       atividade: "Palestra 1: Tema a definir",
       tipo: "palestra",
     },
     {
-      horario: "10:30 - 11:00",
-      atividade: "Coffee Break",
+      horario: "16:30 - 17:00",
+      atividade: "A definir",
       tipo: "coffee",
     },
     {
-      horario: "11:00 - 12:30",
+      horario: "17:00 - 18:30",
       atividade: "Palestra 2: Tema a definir",
       tipo: "palestra",
     },
     {
-      horario: "12:30 - 14:00",
-      atividade: "Almoço",
-      tipo: "almoco",
-    },
-    {
-      horario: "14:00 - 15:30",
-      atividade: "Mesa Redonda: Tema a definir",
+      horario: "18:30 - 19:00",
+      atividade: "Mesa Redonda / Perguntas",
       tipo: "mesa",
     },
     {
-      horario: "15:30 - 16:00",
-      atividade: "Coffee Break",
-      tipo: "coffee",
-    },
-    {
-      horario: "16:00 - 17:30",
-      atividade: "Palestra 3: Tema a definir",
-      tipo: "palestra",
-    },
-    {
-      horario: "17:30 - 18:00",
+      horario: "19:00 - 19:30",
       atividade: "Encerramento e Entrega de Certificados",
       tipo: "encerramento",
     },
@@ -87,7 +72,7 @@ export default function Simposio() {
             backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
           }}></div>
         </div>
-        
+
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6">
@@ -122,7 +107,7 @@ export default function Simposio() {
                 <CardContent className="p-6 text-center">
                   <Calendar className="h-8 w-8 text-primary mx-auto mb-3" />
                   <p className="text-sm font-semibold text-muted-foreground mb-1">Data</p>
-                  <p className="font-bold">A definir</p>
+                  <p className="font-bold">16/05/2026</p>
                 </CardContent>
               </Card>
 
@@ -130,7 +115,7 @@ export default function Simposio() {
                 <CardContent className="p-6 text-center">
                   <Clock className="h-8 w-8 text-secondary mx-auto mb-3" />
                   <p className="text-sm font-semibold text-muted-foreground mb-1">Horário</p>
-                  <p className="font-bold">08h às 18h</p>
+                  <p className="font-bold">14h às 19h30</p>
                 </CardContent>
               </Card>
 
@@ -138,7 +123,8 @@ export default function Simposio() {
                 <CardContent className="p-6 text-center">
                   <MapPin className="h-8 w-8 text-accent mx-auto mb-3" />
                   <p className="text-sm font-semibold text-muted-foreground mb-1">Local</p>
-                  <p className="font-bold">A definir</p>
+                  <p className="font-bold text-sm">Graça Igreja Batista</p>
+                  <p className="text-xs text-muted-foreground">Rua Adezinho da Costa Pinto, 149, Bairro Industrial</p>
                 </CardContent>
               </Card>
 
@@ -156,9 +142,9 @@ export default function Simposio() {
                 Sobre o <span className="text-gradient">Simpósio</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                O Simpósio Instituto Fonte das Águas é um evento anual que reúne profissionais, 
-                voluntários, educadores e lideranças comunitárias para discutir temas relevantes 
-                sobre desenvolvimento social, educação, voluntariado e transformação comunitária. 
+                O Simpósio Instituto Fonte das Águas é um evento anual que reúne profissionais,
+                voluntários, educadores e lideranças comunitárias para discutir temas relevantes
+                sobre desenvolvimento social, educação, voluntariado e transformação comunitária.
                 É uma oportunidade única de aprendizado, networking e troca de experiências.
               </p>
             </div>
@@ -183,7 +169,7 @@ export default function Simposio() {
               <CardContent className="p-8">
                 <div className="space-y-4">
                   {programacao.map((item, index) => (
-                    <div 
+                    <div
                       key={index}
                       className="flex gap-4 pb-4 border-b last:border-b-0 last:pb-0"
                     >
@@ -286,9 +272,9 @@ export default function Simposio() {
                 <CardContent className="p-6 flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold mb-2">Coffee Break e Almoço</h3>
+                    <h3 className="font-bold mb-2">Evento Gratuito</h3>
                     <p className="text-sm text-muted-foreground">
-                      Alimentação completa incluída na inscrição
+                      Participação totalmente gratuita e aberta ao público
                     </p>
                   </div>
                 </CardContent>
@@ -319,12 +305,16 @@ export default function Simposio() {
                 Garanta sua Vaga!
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                As inscrições são limitadas. Não perca a oportunidade de participar deste evento único.
+                As vagas são limitadas. Não perca a oportunidade de participar deste evento gratuito e único!
               </p>
               <div className="space-y-4 mb-8">
                 <div className="inline-flex items-center gap-2 text-lg">
                   <CheckCircle2 className="h-6 w-6" />
-                  <span>Inscrição gratuita</span>
+                  <span>Evento gratuito</span>
+                </div>
+                <div className="inline-flex items-center gap-2 text-lg ml-8">
+                  <CheckCircle2 className="h-6 w-6" />
+                  <span>Com certificado</span>
                 </div>
                 <div className="inline-flex items-center gap-2 text-lg ml-8">
                   <CheckCircle2 className="h-6 w-6" />
@@ -333,7 +323,7 @@ export default function Simposio() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/5579996402118?text=Olá! Gostaria de me inscrever no Simpósio do Instituto Fonte das Águas."
+                  href="https://wa.me/5579991439647?text=Olá! Gostaria de me inscrever no Simpósio do Instituto Fonte das Águas."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-white/90 transition-colors"
@@ -365,8 +355,7 @@ export default function Simposio() {
                 <CardContent className="p-6">
                   <h3 className="font-bold mb-2">O simpósio é gratuito?</h3>
                   <p className="text-sm text-muted-foreground">
-                    Sim, a inscrição é totalmente gratuita e inclui certificado, material didático, 
-                    coffee breaks e almoço.
+                    Sim! O evento é totalmente gratuito e inclui certificado de participação.
                   </p>
                 </CardContent>
               </Card>
@@ -375,7 +364,7 @@ export default function Simposio() {
                 <CardContent className="p-6">
                   <h3 className="font-bold mb-2">Quem pode participar?</h3>
                   <p className="text-sm text-muted-foreground">
-                    O simpósio é aberto para educadores, voluntários, estudantes, profissionais da 
+                    O simpósio é aberto para educadores, voluntários, estudantes, profissionais da
                     área social e qualquer pessoa interessada nos temas abordados.
                   </p>
                 </CardContent>
@@ -385,7 +374,7 @@ export default function Simposio() {
                 <CardContent className="p-6">
                   <h3 className="font-bold mb-2">Como faço para me inscrever?</h3>
                   <p className="text-sm text-muted-foreground">
-                    As inscrições podem ser feitas pelo WhatsApp ou e-mail. Basta clicar no botão 
+                    As inscrições podem ser feitas pelo WhatsApp ou e-mail. Basta clicar no botão
                     de inscrição e preencher seus dados.
                   </p>
                 </CardContent>
@@ -395,8 +384,7 @@ export default function Simposio() {
                 <CardContent className="p-6">
                   <h3 className="font-bold mb-2">Vou receber certificado?</h3>
                   <p className="text-sm text-muted-foreground">
-                    Sim, todos os participantes presentes receberão certificado digital de participação 
-                    com carga horária de 8 horas.
+                    Sim! Todos os participantes presentes receberão certificado digital de participação.
                   </p>
                 </CardContent>
               </Card>

@@ -17,10 +17,10 @@ export default function Home() {
         
         <div className="container relative z-10 text-center text-white">
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
-            Dignidade Humana e Justiça Social
+            Trabalhando para promover a dignidade humana e a justiça social
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up">
-            Transformando vidas através do amor, educação e acolhimento na comunidade de Aracaju
+            Transformando vidas no Bairro Industrial por meio do amor, da educação e do cuidado com crianças, famílias e comunidades vulneráveis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <Link href="/doar">
@@ -48,8 +48,8 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-display text-4xl font-bold text-primary mb-2">56</h3>
-                <p className="text-muted-foreground font-medium">Voluntários Ativos</p>
+                <h3 className="font-display text-4xl font-bold text-primary mb-2">40</h3>
+                <p className="text-muted-foreground font-medium">Voluntários, entre fixos, eventuais e digitais</p>
               </CardContent>
             </Card>
 
@@ -58,8 +58,8 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 mb-4">
                   <Heart className="h-8 w-8 text-secondary" />
                 </div>
-                <h3 className="font-display text-4xl font-bold text-secondary mb-2">53</h3>
-                <p className="text-muted-foreground font-medium">Famílias Assistidas</p>
+                <h3 className="font-display text-4xl font-bold text-secondary mb-2">50</h3>
+                <p className="text-muted-foreground font-medium">Famílias, principalmente no Bairro Industrial e entorno</p>
               </CardContent>
             </Card>
 
@@ -68,7 +68,7 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-4">
                   <Award className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="font-display text-4xl font-bold text-accent mb-2">100+</h3>
+                <h3 className="font-display text-4xl font-bold text-accent mb-2">300</h3>
                 <p className="text-muted-foreground font-medium">Vidas Transformadas</p>
               </CardContent>
             </Card>
@@ -82,7 +82,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <img 
-                src="/community.png" 
+                src="/community.png"  
                 alt="Comunidade Instituto Fonte das Águas" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
@@ -131,8 +131,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-display text-2xl font-bold mb-4 text-primary">Missão</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Promover um espaço seguro e acolhedor para crianças, adolescentes e suas famílias, 
-                  oferecendo oportunidades de desenvolvimento integral e fortalecimento de vínculos comunitários.
+                  Nossa MISSÃO é promover um espaço seguro e acolhedor, a fim de resgatar a dignidade de crianças, adolescentes e suas familias
                 </p>
               </CardContent>
             </Card>
@@ -144,8 +143,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-display text-2xl font-bold mb-4 text-secondary">Visão</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Ser referência na capacitação de pessoas e no desenvolvimento comunitário, 
-                  inspirando transformação social através do amor, educação e justiça.
+                  Nossa VISÃO é ser referência em desenvolvimento e capacitação de pessoas para serem protagonista das suas histórias.
                 </p>
               </CardContent>
             </Card>
