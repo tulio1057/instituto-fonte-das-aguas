@@ -23,12 +23,12 @@ export default function Home() {
             Transformando vidas no Bairro Industrial por meio do amor, da educação e do cuidado com crianças, famílias e comunidades vulneráveis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-            <Link href="/doar">
+            <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="gradient-secondary text-white font-semibold text-lg px-8 py-6 hover:scale-105 transition-transform">
                 Faça sua Doação
                 <Heart className="ml-2 h-5 w-5 fill-white" />
               </Button>
-            </Link>
+            </a>
             <Link href="/voluntarios">
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6">
                 Seja Voluntário
@@ -42,34 +42,90 @@ export default function Home() {
       {/* Números de Impacto */}
       <section className="section-padding bg-muted/30">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold">
+              Números que <span className="text-gradient">Impactam</span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                  <Users className="h-8 w-8 text-primary" />
+              <CardContent className="p-6 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
+                  <Users className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="font-display text-4xl font-bold text-primary mb-2">40</h3>
-                <p className="text-muted-foreground font-medium">Voluntários, entre fixos, eventuais e digitais</p>
+                <h3 className="font-display text-3xl font-bold text-primary mb-2">40</h3>
+                <p className="text-sm text-muted-foreground font-medium">Voluntários Ativos</p>
               </CardContent>
             </Card>
 
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 mb-4">
-                  <Heart className="h-8 w-8 text-secondary" />
+              <CardContent className="p-6 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary/10 mb-4">
+                  <Heart className="h-7 w-7 text-secondary" />
                 </div>
-                <h3 className="font-display text-4xl font-bold text-secondary mb-2">50</h3>
-                <p className="text-muted-foreground font-medium">Famílias, principalmente no Bairro Industrial e entorno</p>
+                <h3 className="font-display text-3xl font-bold text-secondary mb-2">50</h3>
+                <p className="text-sm text-muted-foreground font-medium">Famílias Assistidas</p>
               </CardContent>
             </Card>
 
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-4">
-                  <Award className="h-8 w-8 text-accent" />
+              <CardContent className="p-6 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-4">
+                  <Award className="h-7 w-7 text-accent" />
                 </div>
-                <h3 className="font-display text-4xl font-bold text-accent mb-2">300</h3>
-                <p className="text-muted-foreground font-medium">Vidas Transformadas</p>
+                <h3 className="font-display text-3xl font-bold text-accent mb-2">67</h3>
+                <p className="text-sm text-muted-foreground font-medium">Crianças em Projetos</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
+                  <HandHeart className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="font-display text-3xl font-bold text-primary mb-2">300+</h3>
+                <p className="text-sm text-muted-foreground font-medium">Vidas Impactadas</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary/10 mb-4">
+                  <Target className="h-7 w-7 text-secondary" />
+                </div>
+                <h3 className="font-display text-3xl font-bold text-secondary mb-2">4 ton</h3>
+                <p className="text-sm text-muted-foreground font-medium">Alimentos Distribuídos</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-4">
+                  <Award className="h-7 w-7 text-accent" />
+                </div>
+                <h3 className="font-display text-3xl font-bold text-accent mb-2">40</h3>
+                <p className="text-sm text-muted-foreground font-medium">Exames de Saúde</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
+                  <Users className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="font-display text-3xl font-bold text-primary mb-2">80%</h3>
+                <p className="text-sm text-muted-foreground font-medium">Retenção Voluntários</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary/10 mb-4">
+                  <Heart className="h-7 w-7 text-secondary" />
+                </div>
+                <h3 className="font-display text-3xl font-bold text-secondary mb-2">11</h3>
+                <p className="text-sm text-muted-foreground font-medium">Projetos Ativos</p>
               </CardContent>
             </Card>
           </div>
@@ -82,27 +138,33 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <img 
-                src="/community.png"  
+                src="/community.png" 
                 alt="Comunidade Instituto Fonte das Águas" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Nosso <span className="text-gradient">Objetivo</span>
+                Quem é o Instituto <span className="text-gradient">Fonte das Águas?</span>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                O Instituto Fonte das Águas nasceu com o propósito de promover a dignidade humana e a justiça social 
-                na comunidade do bairro Industrial, em Aracaju. Trabalhamos diariamente para criar um espaço seguro 
-                e acolhedor onde crianças, adolescentes e suas famílias possam encontrar apoio, educação e esperança.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                O Instituto Fonte das Águas nasceu em meio à pandemia da Covid-19, fruto de um movimento 
+                da Graça Igreja Batista, que há mais de 45 anos desenvolve ações sociais no Bairro Industrial. 
+                Em 2022, foi fundado oficialmente para ampliar e estruturar esse cuidado com a comunidade.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Através de nossos projetos e ações, buscamos capacitar pessoas, fortalecer vínculos familiares e 
-                construir uma comunidade mais justa e solidária.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                O nome carrega significado profundo: no Bairro Industrial, antigas fontes no passado abasteciam 
+                Aracaju. Assim como aquelas fontes foram essenciais para a vida, o Instituto nasce para ser 
+                fonte de esperança e dignidade para pessoas cuja história foi marcada por exclusão.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Estamos presentes para ser um espaço de acolhimento, proteção e segurança para crianças, 
+                adolescentes e suas famílias, fortalecendo vínculos, promovendo oportunidades e trabalhando 
+                pela dignidade humana e justiça social.
               </p>
               <Link href="/sobre">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-                  Conheça Nossa História
+                  Conheça Nossa História Completa
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -131,7 +193,8 @@ export default function Home() {
                 </div>
                 <h3 className="font-display text-2xl font-bold mb-4 text-primary">Missão</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nossa MISSÃO é promover um espaço seguro e acolhedor, a fim de resgatar a dignidade de crianças, adolescentes e suas familias
+                  Promover um espaço seguro e acolhedor para resgatar a dignidade de crianças, adolescentes 
+                  e suas famílias.
                 </p>
               </CardContent>
             </Card>
@@ -143,7 +206,8 @@ export default function Home() {
                 </div>
                 <h3 className="font-display text-2xl font-bold mb-4 text-secondary">Visão</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nossa VISÃO é ser referência em desenvolvimento e capacitação de pessoas para serem protagonista das suas histórias.
+                  Ser referência em desenvolvimento e capacitação de pessoas para serem protagonistas 
+                  das suas histórias.
                 </p>
               </CardContent>
             </Card>
@@ -157,7 +221,7 @@ export default function Home() {
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2 text-muted-foreground">
                     <div className="w-2 h-2 rounded-full bg-accent"></div>
-                    <span className="font-medium">Amor</span>
+                    <span className="font-medium">Amor ao próximo</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
                     <div className="w-2 h-2 rounded-full bg-accent"></div>
@@ -166,6 +230,14 @@ export default function Home() {
                   <li className="flex items-center gap-2 text-muted-foreground">
                     <div className="w-2 h-2 rounded-full bg-accent"></div>
                     <span className="font-medium">Integridade</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-muted-foreground">
+                    <div className="w-2 h-2 rounded-full bg-accent"></div>
+                    <span className="font-medium">Respeito</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-muted-foreground">
+                    <div className="w-2 h-2 rounded-full bg-accent"></div>
+                    <span className="font-medium">Dignidade</span>
                   </li>
                 </ul>
               </CardContent>
@@ -259,22 +331,25 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Faça Parte Dessa Transformação
+                Seja Fonte de Esperança
               </h2>
+              <p className="text-xl mb-4 leading-relaxed opacity-90">
+                Transforme vidas no Bairro Industrial. Sua contribuição faz a diferença real na vida 
+                de centenas de crianças, adolescentes e famílias vulneráveis.
+              </p>
               <p className="text-xl mb-8 leading-relaxed opacity-90">
-                Sua contribuição pode mudar vidas. Seja através de doações, trabalho voluntário ou 
-                compartilhando nossa missão, você pode fazer a diferença na vida de dezenas de famílias.
+                <strong>Juntos pela dignidade humana</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/doar">
+                <a href="https://fontedasaguas.paradoar.org/" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold">
-                    Doar Agora
+                    Doe Agora
                     <Heart className="ml-2 h-5 w-5" />
                   </Button>
-                </Link>
+                </a>
                 <Link href="/voluntarios">
                   <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary">
-                    Quero Ser Voluntário
+                    Seja Voluntário
                     <Users className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>

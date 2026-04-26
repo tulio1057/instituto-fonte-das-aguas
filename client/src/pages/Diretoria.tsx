@@ -1,38 +1,43 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin, User } from "lucide-react";
-import { Mail } from "lucide-react";
+import { Mail, Linkedin, User } from "lucide-react";
 
-// Dados da diretoria (podem ser atualizados conforme necessário)
+// Dados da diretoria
 const diretoria = [
   {
-    nome: "Felipe Rocha Silva",
-    cargo: "Presidente do Instituto",
+    nome: "Felipe Rocha",
+    cargo: "Presidente",
     descricao: "Responsável pela gestão geral e direcionamento estratégico do instituto.",
+    email: "presidencia@institutofontedasaguas.org",
   },
   {
-    nome: "Kelly Tamires Furtuoso Santos",
+    nome: "Kelly Furtuoso",
     cargo: "Vice-Presidente",
     descricao: "Auxilia na gestão e coordenação das atividades institucionais.",
+    email: "vicepresidencia@institutofontedasaguas.org",
   },
   {
-    nome: "Diogo Rian Nascimento de Oliveira Leobino",
-    cargo: "1° Tesoureiro do Instituto",
-    descricao: "Responsável principal pela gestão financeira do instituto, incluindo orçamento, contabilidade e prestação de contas.",
+    nome: "Diogo Rian",
+    cargo: "1º Tesoureiro",
+    descricao: "Gerencia os recursos financeiros e administrativos do instituto.",
+    email: "tesouraria1@institutofontedasaguas.org",
   },
   {
-    nome: "Katiane Furtuoso Santos",
-    cargo: "1º Secretário do Instituto",
-    descricao: "Supervisiona os serviços administrativos, financeiros e de recursos humanos.",
+    nome: "Rick Vieira",
+    cargo: "2º Tesoureiro",
+    descricao: "Auxilia na gestão e acompanhamento dos recursos financeiros.",
+    email: "tesouraria2@institutofontedasaguas.org",
   },
   {
-    nome: "Dayvisson Fontes da Silva",
-    cargo: "Conselho Fiscal",
-    descricao: "Fiscaliza as contas e a gestão financeira do instituto.",
+    nome: "Katiane Furtuoso",
+    cargo: "1º Secretária",
+    descricao: "Responsável pela documentação e registro das atividades institucionais.",
+    email: "secretaria1@institutofontedasaguas.org",
   },
   {
-    nome: "Rick de Jesus Andrade Vieira",
-    cargo: "Conselho Fiscal",
-    descricao: "Fiscaliza as contas e a gestão financeira do instituto.",
+    nome: "Dayvisson Fontes",
+    cargo: "2º Secretário",
+    descricao: "Auxilia na secretaria e coordenação administrativa.",
+    email: "secretaria2@institutofontedasaguas.org",
   },
 ];
 
@@ -58,9 +63,9 @@ export default function Diretoria() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Nossa diretoria é composta por pessoas dedicadas e comprometidas com a missão de promover
-              a dignidade humana e a justiça social. Cada membro traz sua experiência e paixão para
-              garantir que o instituto cumpra seus objetivos e impacte positivamente a vida de
+              Nossa diretoria é composta por pessoas dedicadas e comprometidas com a missão de promover 
+              a dignidade humana e a justiça social. Cada membro traz sua experiência e paixão para 
+              garantir que o instituto cumpra seus objetivos e impacte positivamente a vida de 
               dezenas de famílias em nossa comunidade.
             </p>
           </div>
@@ -68,8 +73,8 @@ export default function Diretoria() {
           {/* Grid de Membros da Diretoria */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {diretoria.map((membro, index) => (
-              <Card
-                key={index}
+              <Card 
+                key={index} 
                 className="border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-2"
               >
                 <CardContent className="p-6">
@@ -91,6 +96,13 @@ export default function Diretoria() {
 
                   {/* Contato */}
                   <div className="flex justify-center gap-3 pt-4 border-t">
+                    <a
+                      href={`mailto:${membro.email}`}
+                      className="p-2 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-colors"
+                      aria-label="Email"
+                    >
+                      <Mail className="h-4 w-4" />
+                    </a>
                     <button
                       className="p-2 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-colors"
                       aria-label="LinkedIn"
@@ -120,8 +132,8 @@ export default function Diretoria() {
                     Gestão Democrática
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    O Instituto Fonte das Águas adota práticas de gestão democrática e participativa,
-                    com reuniões regulares da diretoria e assembleias com a comunidade. Todas as
+                    O Instituto Fonte das Águas adota práticas de gestão democrática e participativa, 
+                    com reuniões regulares da diretoria e assembleias com a comunidade. Todas as 
                     decisões importantes são tomadas de forma coletiva e transparente.
                   </p>
                 </CardContent>
@@ -133,8 +145,8 @@ export default function Diretoria() {
                     Prestação de Contas
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Mantemos total transparência em nossa gestão financeira e administrativa.
-                    Nossos relatórios e demonstrativos estão disponíveis na seção de Transparência
+                    Mantemos total transparência em nossa gestão financeira e administrativa. 
+                    Nossos relatórios e demonstrativos estão disponíveis na seção de Transparência 
                     do site, garantindo que doadores e parceiros possam acompanhar o uso dos recursos.
                   </p>
                 </CardContent>
@@ -146,8 +158,8 @@ export default function Diretoria() {
                     Conselho Fiscal
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Nosso Conselho Fiscal é composto por membros independentes que fiscalizam
-                    as contas e a gestão do instituto, garantindo a correta aplicação dos recursos
+                    Nosso Conselho Fiscal é composto por membros independentes que fiscalizam 
+                    as contas e a gestão do instituto, garantindo a correta aplicação dos recursos 
                     e o cumprimento das normas legais e estatutárias.
                   </p>
                 </CardContent>
@@ -159,8 +171,8 @@ export default function Diretoria() {
                     Código de Ética
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Todos os membros da diretoria, voluntários e colaboradores seguem nosso
-                    Código de Ética, que estabelece princípios de integridade, respeito,
+                    Todos os membros da diretoria, voluntários e colaboradores seguem nosso 
+                    Código de Ética, que estabelece princípios de integridade, respeito, 
                     confidencialidade e compromisso com a missão institucional.
                   </p>
                 </CardContent>
@@ -179,11 +191,11 @@ export default function Diretoria() {
                 Quer Fazer Parte da Nossa Equipe?
               </h2>
               <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                Estamos sempre em busca de pessoas comprometidas com nossa missão.
+                Estamos sempre em busca de pessoas comprometidas com nossa missão. 
                 Se você tem interesse em contribuir como voluntário ou parceiro, entre em contato conosco.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a 
                   href="mailto:contato@institutofontedasaguas.org"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-white/90 transition-colors"
                 >

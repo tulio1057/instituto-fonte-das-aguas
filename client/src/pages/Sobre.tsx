@@ -25,16 +25,36 @@ export default function Sobre() {
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-center">
               Nossa <span className="text-gradient">História</span>
             </h2>
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                O Instituto Fonte das Águas nasceu em meio à pandemia da Covid-19, em um tempo marcado pela dor, pela incerteza e pela urgência do cuidado com o outro. Ele surge como fruto de um movimento da Graça Igreja Batista, que há mais de 45 anos desenvolve ações sociais na comunidade do Bairro Industrial, em Aracaju. Há cerca de 20 anos, a igreja é presidida pelo pastor Antônio Sampaio, que, diante dos desafios intensificados pela pandemia, decidiu fundar oficialmente o Instituto, em 2022, para ampliar e estruturar esse cuidado.
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                O Instituto Fonte das Águas nasceu em meio à pandemia da Covid-19, em um tempo marcado pela dor, 
+                pela incerteza e pela urgência do cuidado com o outro. Ele surge como fruto de um movimento da 
+                Graça Igreja Batista, que há mais de 45 anos desenvolve ações sociais na comunidade do Bairro Industrial, 
+                em Aracaju. Há cerca de 20 anos, a igreja é presidida pelo pastor Antônio Sampaio, que, diante dos 
+                desafios intensificados pela pandemia, decidiu fundar oficialmente o Instituto, em 2022, para ampliar 
+                e estruturar esse cuidado.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                O nome Fonte das Águas carrega um significado profundo e simbólico. No Bairro Industrial, mais especificamente na Rua Manoel Preto, existem antigas fontes que, no passado, abasteciam a cidade de Aracaju quando ainda não havia uma rede pública de água. Assim como aquelas fontes foram essenciais para a vida da cidade, o Instituto nasce com o propósito de voltar a ser fonte de vida, esperança e dignidade para pessoas que, ao longo dos anos, viram seu território ser marginalizado e marcado por estigmas de violência e exclusão.
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                O nome Fonte das Águas carrega um significado profundo e simbólico. No Bairro Industrial, mais 
+                especificamente na Rua Manoel Preto, existem antigas fontes que, no passado, abasteciam a cidade de 
+                Aracaju quando ainda não havia uma rede pública de água. Assim como aquelas fontes foram essenciais 
+                para a vida da cidade, o Instituto nasce com o propósito de voltar a ser fonte de vida, esperança e 
+                dignidade para pessoas que, ao longo dos anos, viram seu território ser marginalizado e marcado por 
+                estigmas de violência e exclusão.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Mas o Bairro Industrial é muito mais do que os rótulos que lhe foram impostos. É um lugar de histórias, de famílias, de crianças cheias de sonhos e de pessoas com propósito. O Instituto Fonte das Águas existe para dar visibilidade a essa realidade, para afirmar que ali há vida pulsando e potencial sendo construído todos os dias.
-Estamos presentes para ser um espaço de acolhimento, proteção e segurança para crianças, adolescentes e suas famílias, fortalecendo vínculos, promovendo oportunidades e trabalhando, de forma contínua, para promover a dignidade humana e a justiça social.
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Mas o Bairro Industrial é muito mais do que os rótulos que lhe foram impostos. É um lugar de histórias, 
+                de famílias, de crianças cheias de sonhos e de pessoas com propósito. O Instituto Fonte das Águas existe 
+                para dar visibilidade a essa realidade, para afirmar que ali há vida pulsando e potencial sendo construído 
+                todos os dias.
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Estamos presentes para ser um espaço de acolhimento, proteção e segurança para crianças, adolescentes e 
+                suas famílias, fortalecendo vínculos, promovendo oportunidades e trabalhando, de forma contínua, para 
+                promover a dignidade humana e a justiça social.
               </p>
             </div>
           </div>
@@ -107,6 +127,20 @@ Estamos presentes para ser um espaço de acolhimento, proteção e segurança pa
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-accent mt-2"></div>
                     <div>
+                      <p className="font-semibold text-foreground">Dignidade</p>
+                      <p className="text-sm text-muted-foreground">Reconhecimento do valor intrínseco de cada pessoa</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-accent mt-2"></div>
+                    <div>
+                      <p className="font-semibold text-foreground">Respeito</p>
+                      <p className="text-sm text-muted-foreground">Valorização das diferenças e autonomia de cada indivíduo</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-accent mt-2"></div>
+                    <div>
                       <p className="font-semibold text-foreground">Integridade</p>
                       <p className="text-sm text-muted-foreground">Transparência e ética em todas as nossas ações</p>
                     </div>
@@ -163,23 +197,24 @@ Estamos presentes para ser um espaço de acolhimento, proteção e segurança pa
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 mb-6">
                   <Home className="h-8 w-8 text-secondary" />
                 </div>
-                <h3 className="font-display text-xl font-bold mb-4">Famílias</h3>
+                <h3 className="font-display text-xl font-bold mb-4">Famílias do Bairro Industrial</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Expandimos nosso atendimento para incluir as famílias, fortalecendo vínculos e 
-                  promovendo o desenvolvimento integral de toda a unidade familiar.
+                  Nosso foco principal são famílias do Bairro Industrial com renda per capita de até 
+                  1,5 salário mínimo. Trabalhamos para garantir que crianças, adolescentes e suas 
+                  famílias tenham acesso a oportunidades de desenvolvimento e melhoria de qualidade de vida.
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                    Assistência alimentar (Mesa da Vida)
+                    Crianças e adolescentes em vulnerabilidade social
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                    Reforma de moradias (Projeto Boa Obra)
+                    Famílias com baixa renda
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                    Capacitação e orientação familiar
+                    Comunidades do Bairro Industrial
                   </li>
                 </ul>
               </CardContent>
