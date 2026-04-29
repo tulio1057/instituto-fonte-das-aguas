@@ -5,59 +5,88 @@ import {
   Mic, Award, Coffee, ArrowRight, CheckCircle2
 } from "lucide-react";
 
+
 export default function Simposio() {
   const palestrantes = [
     {
-      nome: "A confirmar",
-      cargo: "Palestrante Convidado",
-      tema: "Tema a definir",
+      nome: "Cássio Ângelo",
+      cargo: "Palestrante",
+      tema: "Crianças e Internet: desafios, riscos e proteção",
+      descricao: "Técnico em Eletroeletrônica pelo IFS, especializando em Inteligência Artificial pela Uninassau. Conhecimentos em Desenvolvimento Web (HTML5, CSS3, JavaScript). Dedica-se a estudar tecnologia e compartilhar conhecimento para promover o uso consciente e seguro das ferramentas digitais.",
+      imagem: "/Palestrante 1.jpeg",
     },
     {
-      nome: "A confirmar",
-      cargo: "Palestrante Convidado",
-      tema: "Tema a definir",
-    },
-    {
-      nome: "A confirmar",
-      cargo: "Palestrante Convidado",
-      tema: "Tema a definir",
+      nome: "André Lopes",
+      cargo: "Palestrante",
+      tema: "Crianças e Internet: desafios, riscos e proteção",
+      descricao: "Educador Digital, Perito Ciber, Mestre em Criminalística com especialização em investigação criminal e Doutorando em Criminologia. Autor do livro 'A Tal da Segurança: Proteção na Era Digital'.",
+      imagem: "/Palestrante 2.jpeg",
     },
   ];
 
   const programacao = [
     {
-      horario: "14:00 - 14:30",
-      atividade: "Credenciamento e Recepção",
-      tipo: "coffee",
-    },
-    {
-      horario: "14:30 - 15:00",
-      atividade: "Abertura Oficial do Simpósio",
+      horario: "14:00",
+      atividade: "Acolhida e Musicalização",
+      descricao: "Recepção dos participantes",
       tipo: "abertura",
     },
     {
-      horario: "15:00 - 16:30",
-      atividade: "Palestra 1: Tema a definir",
+      horario: "14:10",
+      atividade: "Boas-vindas Institucionais",
+      descricao: "Contextualização do encontro e objetivos da tarde",
+      tipo: "abertura",
+    },
+    {
+      horario: "14:30",
+      atividade: "Painel I – Crianças e Internet: desafios, riscos e proteção",
+      descricao: "Palestrantes: André e Cássio",
       tipo: "palestra",
     },
     {
-      horario: "16:30 - 17:00",
-      atividade: "A definir",
+      horario: "15:30",
+      atividade: "Momento Institucional e Convite à Causa",
+      descricao: "Instituto Fonte das Águas",
+      tipo: "institucional",
+    },
+    {
+      horario: "15:45",
+      atividade: "Pausa para Café e Mobilização Solidária",
+      descricao: "Networking, contribuições espontâneas e apoio ao Instituto",
       tipo: "coffee",
     },
     {
-      horario: "17:00 - 18:30",
-      atividade: "Palestra 2: Tema a definir",
+      horario: "16:15",
+      atividade: "Painel II – Pornografia Infantil",
+      descricao: "Palestrantes: Sara e Joice",
       tipo: "palestra",
     },
     {
-      horario: "18:30 - 19:00",
-      atividade: "Mesa Redonda / Perguntas",
-      tipo: "mesa",
+      horario: "17:45",
+      atividade: "Grupos Temáticos e Construção de Planos de Ação",
+      descricao: "Troca de experiências e desafios concretos",
+      tipo: "grupo",
     },
     {
-      horario: "19:00 - 19:30",
-      atividade: "Encerramento e Entrega de Certificados",
+      horario: "18:30",
+      atividade: "Musicalização e Roda de Conversa",
+      descricao: "Perguntas, dúvidas e partilhas com os palestrantes",
+      tipo: "roda",
+    },
+    {
+      horario: "18:55",
+      atividade: "Socialização dos Planos de Ação",
+      tipo: "grupo",
+    },
+    {
+      horario: "19:15",
+      atividade: "Encerramento",
+      descricao: "Entrega dos certificados e foto oficial do simpósio",
+      tipo: "encerramento",
+    },
+    {
+      horario: "19:30",
+      atividade: "Fim do Evento",
       tipo: "encerramento",
     },
   ];
@@ -173,17 +202,21 @@ export default function Simposio() {
                       key={index}
                       className="flex gap-4 pb-4 border-b last:border-b-0 last:pb-0"
                     >
-                      <div className="flex-shrink-0 w-32">
+                      <div className="flex-shrink-0 w-24">
                         <p className="font-bold text-primary">{item.horario}</p>
                       </div>
-                      <div className="flex-1 flex items-center gap-3">
-                        {item.tipo === "coffee" && <Coffee className="h-5 w-5 text-secondary flex-shrink-0" />}
-                        {item.tipo === "palestra" && <Mic className="h-5 w-5 text-primary flex-shrink-0" />}
-                        {item.tipo === "mesa" && <Users className="h-5 w-5 text-accent flex-shrink-0" />}
-                        {item.tipo === "abertura" && <Award className="h-5 w-5 text-primary flex-shrink-0" />}
-                        {item.tipo === "encerramento" && <Award className="h-5 w-5 text-secondary flex-shrink-0" />}
-                        {item.tipo === "almoco" && <Coffee className="h-5 w-5 text-accent flex-shrink-0" />}
-                        <p className="text-muted-foreground">{item.atividade}</p>
+                      <div className="flex-1 flex items-start gap-3">
+                        {item.tipo === "coffee" && <Coffee className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />}
+                        {item.tipo === "palestra" && <Mic className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />}
+                        {item.tipo === "grupo" && <Users className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />}
+                        {item.tipo === "abertura" && <Award className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />}
+                        {item.tipo === "encerramento" && <Award className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />}
+                        {item.tipo === "institucional" && <Users className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />}
+                        {item.tipo === "roda" && <Users className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />}
+                        <div>
+                          <p className="font-semibold text-foreground">{item.atividade}</p>
+                          {item.descricao && <p className="text-sm text-muted-foreground">{item.descricao}</p>}
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -211,24 +244,32 @@ export default function Simposio() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               {palestrantes.map((palestrante, index) => (
                 <Card key={index} className="border-none shadow-lg">
                   <CardContent className="p-8 text-center">
-                    <div className="w-24 h-24 mx-auto rounded-full gradient-primary flex items-center justify-center mb-4">
-                      <Users className="h-12 w-12 text-white" />
-                    </div>
+                    {palestrante.imagem ? (
+                      <img
+                        src={palestrante.imagem}
+                        alt={palestrante.nome}
+                        className="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-4 border-primary"
+                      />
+                    ) : (
+                      <div className="w-24 h-24 mx-auto rounded-full gradient-primary flex items-center justify-center mb-4">
+                        <Users className="h-12 w-12 text-white" />
+                      </div>
+                    )}
                     <h3 className="font-display text-xl font-bold mb-2">{palestrante.nome}</h3>
-                    <p className="text-sm font-semibold text-primary mb-3">{palestrante.cargo}</p>
-                    <p className="text-sm text-muted-foreground">{palestrante.tema}</p>
+                    <p className="text-sm font-semibold text-primary mb-1">{palestrante.cargo}</p>
+                    <p className="text-xs font-semibold text-secondary mb-3">{palestrante.tema}</p>
+                    {palestrante.descricao && (
+                      <p className="text-xs text-muted-foreground leading-relaxed">{palestrante.descricao}</p>
+                    )}
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            <p className="text-center text-muted-foreground mt-8">
-              Mais palestrantes serão anunciados em breve!
-            </p>
           </div>
         </div>
       </section>
