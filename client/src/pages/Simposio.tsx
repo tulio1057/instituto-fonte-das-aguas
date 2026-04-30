@@ -123,7 +123,7 @@ export default function Simposio() {
               <span className="font-semibold">Evento Anual</span>
             </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
-              Simpósio Instituto<br />Fonte das Águas
+              SIMPÓSIO INFÂNCIA SEGURA 2026<br />Fonte das Águas
             </h1>
             <p className="text-xl md:text-2xl leading-relaxed opacity-90 mb-8">
               Um dia dedicado ao conhecimento, networking e transformação social
