@@ -1,7 +1,9 @@
+import "dotenv/config";
 import express from "express";
 import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
+import adminRouter from "./admin.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,7 +12,19 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Serve static files from dist/public in production
+  // ---------------------------------------------------------------------------
+  // Middlewares globais
+  // ---------------------------------------------------------------------------
+  app.use(express.json({ limit: "1mb" })); // parseia JSON no body das requisições
+
+  // ---------------------------------------------------------------------------
+  // Rotas da API admin
+  // ---------------------------------------------------------------------------
+  app.use("/api", adminRouter);
+
+  // ---------------------------------------------------------------------------
+  // Arquivos estáticos do frontend (igual ao original)
+  // ---------------------------------------------------------------------------
   const staticPath =
     process.env.NODE_ENV === "production"
       ? path.resolve(__dirname, "public")
@@ -18,15 +32,18 @@ async function startServer() {
 
   app.use(express.static(staticPath));
 
-  // Handle client-side routing - serve index.html for all routes
+  // SPA fallback — todas as rotas não-API servem o index.html
   app.get("*", (_req, res) => {
     res.sendFile(path.join(staticPath, "index.html"));
   });
 
-  const port = process.env.PORT || 3000;
-
+  // ---------------------------------------------------------------------------
+  // Start
+  // ---------------------------------------------------------------------------
+  const port = process.env.PORT || 3001;
   server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}/`);
+    console.log(`Servidor rodando em http://localhost:${port}/`);
+    console.log(`Painel admin disponível em http://localhost:${port}/admin`);
   });
 }
 

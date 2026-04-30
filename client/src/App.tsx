@@ -10,11 +10,6 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { ROUTES } from "./config";
 
-// ============================================================================
-// IMPORTAÇÕES DE PÁGINAS
-// ============================================================================
-// Todas as páginas da aplicação são importadas aqui de forma centralizada
-
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Diretoria from "./pages/Diretoria";
@@ -27,109 +22,64 @@ import Contato from "./pages/Contato";
 import Transparencia from "./pages/Transparencia";
 import Capacitacoes from "./pages/Capacitacoes";
 import Simposio from "./pages/Simposio";
-
-// ============================================================================
-// COMPONENTE: ScrollToTop
-// ============================================================================
-// Faz scroll para o topo da página quando a rota muda
+import AdminPage from "./pages/Admin";
 
 function ScrollToTop() {
   const [location] = useLocation();
-
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location]);
-
   return null;
 }
 
-// ============================================================================
-// COMPONENTE: Router
-// ============================================================================
-// Define todas as rotas disponíveis na aplicação
+// Layout completo — detecta /admin para esconder nav/footer
+function AppLayout() {
+  const [location] = useLocation();
+  const isAdmin = location.startsWith("/admin");
 
-function Router() {
+  if (isAdmin) {
+    return (
+      <>
+        <ScrollToTop />
+        <Route path="/admin" component={AdminPage} />
+      </>
+    );
+  }
+
   return (
-    <>
-      <ScrollToTop />
-      <Switch>
-        {/* Rota: Home */}
-        <Route path={ROUTES.home} component={Home} />
-
-        {/* Rota: Sobre */}
-        <Route path={ROUTES.sobre} component={Sobre} />
-
-        {/* Rota: Diretoria */}
-        <Route path={ROUTES.diretoria} component={Diretoria} />
-
-        {/* Rota: Voluntários */}
-        <Route path={ROUTES.voluntarios} component={Voluntarios} />
-
-        {/* Rota: Projetos */}
-        <Route path={ROUTES.projetos} component={Projetos} />
-
-        {/* Rota: Detalhes do Projeto */}
-        <Route path={ROUTES.projetoDetalhe} component={ProjetoDetalhe} />
-
-        {/* Rota: Eventos */}
-        <Route path={ROUTES.eventos} component={Eventos} />
-
-        {/* Rota: Como Ajudar */}
-        <Route path={ROUTES.comoAjudar} component={ComoAjudar} />
-
-        {/* Rota: Contato */}
-        <Route path={ROUTES.contato} component={Contato} />
-
-        {/* Rota: Transparência */}
-        <Route path={ROUTES.transparencia} component={Transparencia} />
-
-        {/* Rota: Capacitações */}
-        <Route path={ROUTES.capacitacoes} component={Capacitacoes} />
-
-        {/* Rota: Simpósio */}
-        <Route path={ROUTES.simposio} component={Simposio} />
-
-        {/* Rota: 404 */}
-        <Route path={ROUTES.notFound} component={NotFound} />
-
-        {/* Fallback para rotas não encontradas */}
-        <Route component={NotFound} />
-      </Switch>
-    </>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        <ScrollToTop />
+        <Switch>
+          <Route path={ROUTES.home} component={Home} />
+          <Route path={ROUTES.sobre} component={Sobre} />
+          <Route path={ROUTES.diretoria} component={Diretoria} />
+          <Route path={ROUTES.voluntarios} component={Voluntarios} />
+          <Route path={ROUTES.projetos} component={Projetos} />
+          <Route path={ROUTES.projetoDetalhe} component={ProjetoDetalhe} />
+          <Route path={ROUTES.eventos} component={Eventos} />
+          <Route path={ROUTES.comoAjudar} component={ComoAjudar} />
+          <Route path={ROUTES.contato} component={Contato} />
+          <Route path={ROUTES.transparencia} component={Transparencia} />
+          <Route path={ROUTES.capacitacoes} component={Capacitacoes} />
+          <Route path={ROUTES.simposio} component={Simposio} />
+          <Route path={ROUTES.notFound} component={NotFound} />
+          <Route component={NotFound} />
+        </Switch>
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
   );
 }
-
-// ============================================================================
-// COMPONENTE: App
-// ============================================================================
-// Componente principal da aplicação que orquestra todos os providers
-// e estrutura de layout
 
 function App() {
   return (
     <ErrorBoundary>
-      {/* Provider de Tema - Permite alternar entre claro e escuro */}
       <ThemeProvider defaultTheme="light" switchable={true}>
-        {/* Provider de Tooltips - Para dicas e acessibilidade */}
         <TooltipProvider>
-          {/* Layout principal com flex para sticky footer */}
-          <div className="flex flex-col min-h-screen">
-            {/* Cabeçalho com navegação */}
-            <Header />
-
-            {/* Conteúdo principal que cresce para preencher espaço disponível */}
-            <main className="flex-1">
-              <Router />
-            </main>
-
-            {/* Rodapé que fica ao fundo */}
-            <Footer />
-
-            {/* Botão flutuante de WhatsApp */}
-            <WhatsAppButton />
-          </div>
-
-          {/* Toaster para notificações */}
+          <AppLayout />
           <Toaster />
         </TooltipProvider>
       </ThemeProvider>

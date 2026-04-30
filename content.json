@@ -1,0 +1,42 @@
+{
+  "instituto": {
+    "nome": "Instituto Fonte das Águas",
+    "slogan": "Dignidade humana e justiça social",
+    "descricao": "Transformando vidas no Bairro Industrial.",
+    "telefone": "(79) 9 9143-9647",
+    "whatsapp": "5579996402118",
+    "email": "",
+    "endereco": "Rua Adezinho da Costa Pinto, 149",
+    "bairro": "Bairro Industrial",
+    "cidade": "Aracaju",
+    "estado": "SE",
+    "cep": "49065-010",
+    "pix": "52250050000120",
+    "instagram": "@instituto.fontedasaguas",
+    "instagramUrl": "https://instagram.com/instituto.fontedasaguas"
+  },
+  "numerosImpacto": [
+    { "numero": "~40", "descricao": "Voluntários" },
+    { "numero": "~50", "descricao": "Famílias" },
+    { "numero": "67",  "descricao": "Crianças/Adolescentes" },
+    { "numero": "300+","descricao": "Vidas Impactadas" }
+  ],
+  "diretoria": [
+    { "id": 1, "nome": "Felipe Rocha",   "cargo": "Presidente" },
+    { "id": 2, "nome": "Diogo Rian",     "cargo": "Vice-Presidente" },
+    { "id": 3, "nome": "Kelly Furtuoso", "cargo": "1º Tesoureiro" }
+  ],
+  "eventosAnuais": [
+    { "nome": "Natal na Fonte", "mes": "Dezembro", "descricao": "Festividades natalinas" }
+  ],
+  "projetos": [
+    {
+      "id": "mamae-na-fonte",
+      "titulo": "Mamãe na Fonte",
+      "descricaoCurta": "Cuidado integral para mulheres.",
+      "descricaoLonga": "O projeto atua no cuidado integral de mulheres.",
+      "impacto": "Mulheres acompanhadas de forma contínua.",
+      "frente": "vinculos-bem-estar"
+    }
+  ]
+}
