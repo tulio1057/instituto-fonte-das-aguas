@@ -212,7 +212,6 @@ export default function Simposio() {
                 Confira a programação prevista para o simpósio
               </p>
             </div>
-
             <Card className="border-none shadow-xl">
               <CardContent className="p-8">
                 <div className="space-y-4">
