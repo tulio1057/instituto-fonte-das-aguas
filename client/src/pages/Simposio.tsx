@@ -390,15 +390,6 @@ export default function Simposio() {
                   Inscrever-se pelo Formulário
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
-                <a
-                  href="https://wa.me/5579991439647?text=Olá! Gostaria de me inscrever no Simpósio do Instituto Fonte das Águas.%0A%0AData: 16/05/2026%0AHorário: 14h às 19h30%0ALocal: Graça Igreja Batista - Rua Adezinho da Costa Pinto, 149, Bairro Industrial%0AEvento Gratuito com Certificado"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-white/90 transition-colors"
-                >
-                  Inscrever-se pelo WhatsApp
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
               </div>
               <p className="text-sm mt-6 opacity-75">
                 Ou entre em contato pelo e-mail: eventos@institutofontedasaguas.org
