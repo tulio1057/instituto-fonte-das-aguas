@@ -442,7 +442,7 @@ export default function Simposio() {
                 <CardContent className="p-6">
                   <h3 className="font-bold mb-2">Como faço para me inscrever?</h3>
                   <p className="text-sm text-muted-foreground">
-                    As inscrições podem ser feitas pelo WhatsApp ou e-mail. Basta clicar no botão
+                    Basta clicar no botão
                     de inscrição e preencher seus dados.
                   </p>
                 </CardContent>
