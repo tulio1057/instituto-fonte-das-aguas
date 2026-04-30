@@ -22,6 +22,20 @@ export default function Simposio() {
       descricao: "Educador Digital, Perito Ciber, Mestre em Criminalística com especialização em investigação criminal e Doutorando em Criminologia. Autor do livro 'A Tal da Segurança: Proteção na Era Digital'.",
       imagem: "/Palestrante 2.jpeg",
     },
+    {
+      nome: "Joice Andrade",
+      cargo: "Palestrante",
+      tema: "Pornografia Infantil",
+      descricao: "Assistente Social, especialista em Saúde Mental e Atenção Psicossocial, educadora emocional e em sexualidade com foco na prevenção ao abuso sexual infantil. Graduanda em pedagogia e coautora do livro 'Educação Consciente: criando com empatia'.",
+      imagem: "/Palestrante 3.jpeg",
+    },
+    {
+      nome: "Sara Oliveira",
+      cargo: "Palestrante",
+      tema: "Pornografia Infantil",
+      descricao: "Missionária com atuação em ministérios voltados às crianças e adolescentes. Formada em Serviço Social com cursos complementares em: Escuta qualificada para vulneráveis ao tráfico de pessoas e Sistema de Informação de Agravos de Notificação - Sinan.",
+      imagem: "/Palestrante 4.jpeg",
+    },
   ];
 
   const programacao = [
@@ -244,7 +258,7 @@ export default function Simposio() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
               {palestrantes.map((palestrante, index) => (
                 <Card key={index} className="border-none shadow-lg">
                   <CardContent className="p-8 text-center">
