@@ -129,10 +129,15 @@ export default function Simposio() {
               Um dia dedicado ao conhecimento, networking e transformação social
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold text-lg px-8 py-6">
+              <a
+                href="https://forms.gle/DUCwBkzeWWG31dQK8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-6 bg-white text-primary rounded-md hover:bg-white/90 font-semibold text-lg transition-colors"
+              >
                 Inscreva-se Agora
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              </a>
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6">
                 Ver Programação
               </Button>
@@ -258,7 +263,7 @@ export default function Simposio() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               {palestrantes.map((palestrante, index) => (
                 <Card key={index} className="border-none shadow-lg">
                   <CardContent className="p-8 text-center">
@@ -377,6 +382,15 @@ export default function Simposio() {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://forms.gle/DUCwBkzeWWG31dQK8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-white/90 transition-colors"
+                >
+                  Inscrever-se pelo Formulário
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
                 <a
                   href="https://wa.me/5579991439647?text=Olá! Gostaria de me inscrever no Simpósio do Instituto Fonte das Águas.%0A%0AData: 16/05/2026%0AHorário: 14h às 19h30%0ALocal: Graça Igreja Batista - Rua Adezinho da Costa Pinto, 149, Bairro Industrial%0AEvento Gratuito com Certificado"
                   target="_blank"
