@@ -1,7 +1,8 @@
 import express from "express";
 import { createServer } from "http";
-import path from "path";
-import { fileURLToPath } from "url";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import adminRouter from "./admin.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,23 +11,26 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Serve static files from dist/public in production
-  const staticPath =
-    process.env.NODE_ENV === "production"
-      ? path.resolve(__dirname, "public")
-      : path.resolve(__dirname, "..", "dist", "public");
+  // Parse JSON bodies (obrigatório para as rotas de admin)
+  app.use(express.json({ limit: "20mb" }));
 
-  app.use(express.static(staticPath));
+  // Rotas da API de admin
+  app.use("/api", adminRouter);
 
-  // Handle client-side routing - serve index.html for all routes
-  app.get("*", (_req, res) => {
-    res.sendFile(path.join(staticPath, "index.html"));
-  });
+  // Em produção: serve o build do Vite
+  if (process.env.NODE_ENV === "production") {
+    const staticPath = path.resolve(__dirname, "public");
+    app.use(express.static(staticPath));
+    app.get("*", (_req, res) => {
+      res.sendFile(path.join(staticPath, "index.html"));
+    });
+  }
 
-  const port = process.env.PORT || 3000;
+  const port = Number(process.env.PORT || 5000);
 
   server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}/`);
+    console.log(`[server] API rodando em http://localhost:${port}/`);
+    console.log(`[server] Painel admin: http://localhost:3000/admin (via Vite proxy)`);
   });
 }
 
