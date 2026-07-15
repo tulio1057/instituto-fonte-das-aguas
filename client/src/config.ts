@@ -51,6 +51,8 @@ export const ROUTES = {
   transparencia: "/transparencia",
   capacitacoes: "/capacitacoes",
   simposio: "/simposio",
+  blog: "/blog",
+  postDetalhe: "/blog/:slug",
   notFound: "/404",
 };
 
@@ -62,6 +64,7 @@ export const NAV_PRIMARY_ITEMS = [
   { name: "Início", path: ROUTES.home },
   { name: "Sobre Nós", path: ROUTES.sobre },
   { name: "Projetos", path: ROUTES.projetos },
+  { name: "Blog", path: ROUTES.blog },
 ];
 
 export const NAV_SECONDARY_ITEMS = [

@@ -42,7 +42,7 @@
 ## Funcionalidades
 - [x] Integração com WhatsApp (botão flutuante)
 - [x] Link direto para contato de voluntariado)
-- [ ] Blog de impactos (área estilo blog)
+- [x] Blog de impactos (área estilo blog)
 - [x] Responsividade mobile
 - [ ] Animações suaves de scroll
 - [ ] SEO básico

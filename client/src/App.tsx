@@ -23,6 +23,8 @@ import Contato from "./pages/Contato";
 import Transparencia from "./pages/Transparencia";
 import Capacitacoes from "./pages/Capacitacoes";
 import Simposio from "./pages/Simposio";
+import Blog from "./pages/Blog";
+import PostDetalhe from "./pages/PostDetalhe";
 import Admin from "./pages/Admin";
 
 function ScrollToTop() {
@@ -51,6 +53,8 @@ function Router() {
         <Route path={ROUTES.transparencia} component={Transparencia} />
         <Route path={ROUTES.capacitacoes} component={Capacitacoes} />
         <Route path={ROUTES.simposio} component={Simposio} />
+        <Route path={ROUTES.blog} component={Blog} />
+        <Route path={ROUTES.postDetalhe} component={PostDetalhe} />
         <Route path="/admin" component={Admin} />
         <Route path={ROUTES.notFound} component={NotFound} />
         <Route component={NotFound} />

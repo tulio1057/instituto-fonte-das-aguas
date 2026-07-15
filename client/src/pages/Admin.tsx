@@ -24,10 +24,12 @@ import {
   LogIn, LogOut, Save, Plus, Trash2, Loader2,
   Building2, Users, BarChart3, Calendar, FolderOpen, Lock,
   GraduationCap, Mic, Upload, X, ImageIcon, ChevronDown, ChevronUp,
-  Link as LinkIcon,
+  Link as LinkIcon, Newspaper,
 } from "lucide-react";
 import type { SiteContent, MembroDiretoria, NumeroImpacto, EventoAnual, Projeto } from "@/services/contentTypes";
 import { CONTENT_FALLBACK } from "@/services/contentFallback";
+import type { BlogPost } from "@/services/postTypes";
+import { slugify } from "@/services/postTypes";
 
 // ---------------------------------------------------------------------------
 // Tipos adicionais para as novas seções
@@ -715,6 +717,152 @@ function SecaoCapacitacoes({
 }
 
 // ---------------------------------------------------------------------------
+// Seção: Blog de Impactos
+// ---------------------------------------------------------------------------
+function SecaoBlog({
+  data,
+  onChange,
+}: {
+  data: BlogPost[];
+  onChange: (d: BlogPost[]) => void;
+}) {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  const update = (i: number, key: keyof BlogPost, v: unknown) => {
+    const next = data.map((item, idx) => (idx === i ? { ...item, [key]: v } : item));
+    onChange(next);
+  };
+
+  return (
+    <div className="space-y-3">
+      {data.map((post, i) => {
+        const isOpen = expanded === post.id;
+        return (
+          <div key={post.id} className="border rounded-xl overflow-hidden">
+            <button
+              type="button"
+              className="w-full flex items-center justify-between px-4 py-3 hover:bg-muted/30 transition-colors text-left"
+              onClick={() => setExpanded(isOpen ? null : post.id)}
+            >
+              <div className="flex items-center gap-3 min-w-0">
+                <Newspaper className="h-4 w-4 text-primary shrink-0" />
+                <span className="font-medium text-sm truncate">{post.titulo || "Novo post"}</span>
+                <span
+                  className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${
+                    post.publicado ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-600"
+                  }`}
+                >
+                  {post.publicado ? "Publicado" : "Rascunho"}
+                </span>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  type="button"
+                  className="text-destructive hover:text-destructive/80 p-1"
+                  onClick={(e) => { e.stopPropagation(); onChange(data.filter((_, idx) => idx !== i)); }}
+                >
+                  <Trash2 className="h-3.5 w-3.5" />
+                </button>
+                {isOpen ? <ChevronUp className="h-4 w-4 text-muted-foreground" /> : <ChevronDown className="h-4 w-4 text-muted-foreground" />}
+              </div>
+            </button>
+
+            {isOpen && (
+              <div className="px-4 pb-5 pt-3 border-t bg-muted/10 space-y-4">
+                <div className="flex items-center justify-between p-3 rounded-lg bg-background border">
+                  <div>
+                    <Label className="text-sm font-medium">Publicado</Label>
+                    <p className="text-xs text-muted-foreground">Posts não publicados ficam salvos como rascunho e não aparecem no site.</p>
+                  </div>
+                  <Switch
+                    checked={post.publicado}
+                    onCheckedChange={(v) => update(i, "publicado", v)}
+                  />
+                </div>
+
+                <ImageUpload
+                  label="Imagem de capa"
+                  value={post.capaBase64 || ""}
+                  onChange={(base64) => update(i, "capaBase64", base64)}
+                  placeholder="Clique ou arraste a imagem de capa do post"
+                  size="md"
+                />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Field
+                    label="Título"
+                    value={post.titulo}
+                    onChange={(v) => {
+                      update(i, "titulo", v);
+                      // Auto-gera o slug a partir do título apenas se o post ainda não tiver um definido manualmente
+                      if (!post.slug || post.slug === slugify(post.titulo)) {
+                        update(i, "slug", slugify(v));
+                      }
+                    }}
+                  />
+                  <Field
+                    label="Slug (URL, ex: /blog/meu-post)"
+                    value={post.slug}
+                    onChange={(v) => update(i, "slug", slugify(v))}
+                  />
+                  <Field label="Autor" value={post.autor} onChange={(v) => update(i, "autor", v)} />
+                  <Field label="Data" value={post.data} onChange={(v) => update(i, "data", v)} type="date" />
+                  <Field
+                    label="Categoria (opcional)"
+                    value={post.categoria || ""}
+                    onChange={(v) => update(i, "categoria", v)}
+                    placeholder="ex: Eventos, Voluntariado, Projetos"
+                  />
+                </div>
+
+                <Field
+                  label="Resumo (aparece na listagem do blog)"
+                  value={post.resumo}
+                  onChange={(v) => update(i, "resumo", v)}
+                  rows={2}
+                />
+
+                <Field
+                  label="Conteúdo (texto puro — deixe uma linha em branco entre parágrafos)"
+                  value={post.conteudo}
+                  onChange={(v) => update(i, "conteudo", v)}
+                  rows={10}
+                />
+              </div>
+            )}
+          </div>
+        );
+      })}
+
+      <Button
+        type="button"
+        variant="outline"
+        size="sm"
+        onClick={() =>
+          onChange([
+            ...data,
+            {
+              id: `post-${Date.now()}`,
+              slug: "",
+              titulo: "",
+              resumo: "",
+              conteudo: "",
+              capaBase64: "",
+              autor: "",
+              data: new Date().toISOString().slice(0, 10),
+              categoria: "",
+              publicado: false,
+            },
+          ])
+        }
+      >
+        <Plus className="h-4 w-4 mr-1" /> Adicionar post
+      </Button>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Seção: Simpósio
 // ---------------------------------------------------------------------------
 function SecaoSimposio({
@@ -1052,6 +1200,7 @@ const SECOES = [
   { key: "instituto",      label: "Informações gerais",  icon: Building2 },
   { key: "projetos",       label: "Projetos",            icon: FolderOpen },
   { key: "diretoria",      label: "Diretoria",           icon: Users },
+  { key: "blog",           label: "Blog de Impactos",    icon: Newspaper },
   { key: "capacitacoes",   label: "Capacitações",        icon: GraduationCap },
   { key: "simposio",       label: "Simpósio",            icon: Mic },
   { key: "numerosImpacto", label: "Números de impacto",  icon: BarChart3 },
@@ -1062,6 +1211,7 @@ type SecaoKey = (typeof SECOES)[number]["key"];
 
 function AdminPanel({ token, onLogout }: { token: string; onLogout: () => void }) {
   const [content, setContent] = useState<SiteContentExtended>(CONTENT_FALLBACK as SiteContentExtended);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loadingData, setLoadingData] = useState(true);
   const [saving, setSaving] = useState(false);
   const [secaoAtiva, setSecaoAtiva] = useState<SecaoKey>("instituto");
@@ -1101,33 +1251,53 @@ function AdminPanel({ token, onLogout }: { token: string; onLogout: () => void }
       .finally(() => setLoadingData(false));
   }, []);
 
+  useEffect(() => {
+    fetch("/api/posts")
+      .then((r) => r.json())
+      .then((data: unknown) => setPosts(Array.isArray(data) ? (data as BlogPost[]) : []))
+      .catch(() => setPosts([]));
+  }, []);
+
   const handleSave = useCallback(async () => {
     setSaving(true);
     try {
-      const res = await fetch("/api/content", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(content),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        if (res.status === 401) {
-          toast.error("Sessão expirada. Faça login novamente.");
-          onLogout();
-          return;
-        }
-        throw new Error(data.error || "Erro ao salvar.");
+      const [contentRes, postsRes] = await Promise.all([
+        fetch("/api/content", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(content),
+        }),
+        fetch("/api/posts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(posts),
+        }),
+      ]);
+
+      const contentData = await contentRes.json();
+      const postsData = await postsRes.json();
+
+      if (contentRes.status === 401 || postsRes.status === 401) {
+        toast.error("Sessão expirada. Faça login novamente.");
+        onLogout();
+        return;
       }
+      if (!contentRes.ok) throw new Error(contentData.error || "Erro ao salvar conteúdo.");
+      if (!postsRes.ok) throw new Error(postsData.error || "Erro ao salvar posts do blog.");
+
       toast.success("Conteúdo salvo! O site já reflete as mudanças.");
     } catch (err: unknown) {
       toast.error(err instanceof Error ? err.message : "Erro ao salvar.");
     } finally {
       setSaving(false);
     }
-  }, [content, token, onLogout]);
+  }, [content, posts, token, onLogout]);
 
   if (loadingData) {
     return (
@@ -1233,6 +1403,12 @@ function AdminPanel({ token, onLogout }: { token: string; onLogout: () => void }
                   <SecaoDiretoria
                     data={content.diretoriaExtended || []}
                     onChange={(d) => setContent({ ...content, diretoriaExtended: d })}
+                  />
+                )}
+                {secaoAtiva === "blog" && (
+                  <SecaoBlog
+                    data={posts}
+                    onChange={setPosts}
                   />
                 )}
                 {secaoAtiva === "capacitacoes" && (

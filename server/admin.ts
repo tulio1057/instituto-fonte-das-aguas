@@ -12,6 +12,7 @@ const router = Router();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CONTENT_PATH = path.resolve(__dirname, "..", "content.json");
+const POSTS_PATH = path.resolve(__dirname, "..", "posts.json");
 
 function getSecret(): string {
   const secret = process.env.ADMIN_SECRET;
@@ -105,6 +106,48 @@ function sanitizeContent(data: Record<string, unknown>): Record<string, unknown>
 }
 
 // ---------------------------------------------------------------------------
+// Posts do Blog — arquivo separado (posts.json) para não inchar o content.json
+// principal com texto/imagens que crescem ao longo do tempo.
+// ---------------------------------------------------------------------------
+function readPosts(): unknown[] {
+  if (!fs.existsSync(POSTS_PATH)) {
+    console.warn("[admin] posts.json não encontrado em", POSTS_PATH);
+    return [];
+  }
+  try {
+    const raw = fs.readFileSync(POSTS_PATH, "utf-8");
+    const data = JSON.parse(raw) as unknown;
+    return Array.isArray(data) ? data : [];
+  } catch (err) {
+    console.error("[admin] Erro ao ler posts.json:", err);
+    return [];
+  }
+}
+
+function writePosts(data: unknown[]): void {
+  const tmp = POSTS_PATH + ".tmp";
+  fs.writeFileSync(tmp, JSON.stringify(data, null, 2), "utf-8");
+  fs.renameSync(tmp, POSTS_PATH);
+}
+
+function validatePosts(data: unknown): data is Record<string, unknown>[] {
+  if (!Array.isArray(data)) return false;
+  const required = ["id", "slug", "titulo", "conteudo"];
+  return data.every(
+    (p) => typeof p === "object" && p !== null && required.every((k) => k in (p as Record<string, unknown>))
+  );
+}
+
+function sanitizePosts(data: Record<string, unknown>[]): Record<string, unknown>[] {
+  return JSON.parse(
+    JSON.stringify(data, (_key, value: unknown) => {
+      if (typeof value === "string") return sanitizeString(value);
+      return value;
+    })
+  ) as Record<string, unknown>[];
+}
+
+// ---------------------------------------------------------------------------
 // Rotas — Express 5: handlers retornam void; response é chamado e depois return
 // ---------------------------------------------------------------------------
 
@@ -167,6 +210,40 @@ router.post("/content", requireAuth, (req: Request, res: Response): void => {
   } catch (err) {
     console.error("[admin] Erro ao salvar content.json:", err);
     res.status(500).json({ error: "Erro ao salvar conteúdo." });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// Rotas — Blog
+// ---------------------------------------------------------------------------
+
+// Pública: retorna todos os posts (o front-end filtra os publicados para o
+// blog público; o painel admin usa a lista completa, incluindo rascunhos).
+router.get("/posts", (_req: Request, res: Response): void => {
+  try {
+    const posts = readPosts();
+    res.json(posts);
+  } catch (err) {
+    console.error("[admin] Erro ao listar posts:", err);
+    res.status(500).json({ error: "Erro ao carregar posts." });
+  }
+});
+
+// Protegida: salva a lista completa de posts (mesmo padrão de "salvar tudo de
+// uma vez" já usado em /content — simples e consistente com o restante do site).
+router.post("/posts", requireAuth, (req: Request, res: Response): void => {
+  const body = req.body as unknown;
+  if (!validatePosts(body)) {
+    res.status(400).json({ error: "Estrutura de dados inválida. Cada post precisa de id, slug, titulo e conteudo." });
+    return;
+  }
+  try {
+    const sanitized = sanitizePosts(body);
+    writePosts(sanitized);
+    res.json({ ok: true, message: "Posts salvos com sucesso!" });
+  } catch (err) {
+    console.error("[admin] Erro ao salvar posts.json:", err);
+    res.status(500).json({ error: "Erro ao salvar posts." });
   }
 });
 
