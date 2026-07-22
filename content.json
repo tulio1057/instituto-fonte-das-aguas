@@ -124,7 +124,30 @@
       "frente": "nutricao-dignidade"
     }
   ],
-  "capacitacoes": [],
+  "capacitacoes": [
+    {
+      "id": "cap-vol-2026-2",
+      "titulo": "Capacitação de Voluntários 2026.2",
+      "descricao": "Uma tarde de escuta, partilha e aprendizado para caminharmos juntos e fortalecermos o jeito Fonte das Águas de acolher. Programação com os módulos \"Famílias em Situação de Vulnerabilidade Social\", \"Servir com Dignidade\" e \"Somos Todos Fonte\". Inclui material didático e certificado digital de participação. Evento exclusivo para voluntários e convidados.",
+      "cargaHoraria": "4h (13h às 17h)",
+      "data": "A definir",
+      "local": "Graça Igreja Batista – R. Adezinho da Costa Pinto, 149, Industrial, Aracaju/SE, CEP 49065-010",
+      "vagas": "A definir",
+      "status": "aberta",
+      "link": "https://forms.gle/L1hgNfwW9pc6vWML8"
+    },
+    {
+      "id": "cap-aula-magna-2026",
+      "titulo": "Aula Magna: Pobreza, Dignidade e Esperança",
+      "descricao": "Percurso Formativo \"Pobreza, Dignidade e Esperança: Compreendendo realidades para transformar vidas\". Aula Magna com a convidada Regina Célia, filósofa e mestra em Ciência Política pela UFPE, especialista em Neuropsicologia e doutoranda em Ciências da Educação. Professora universitária há 30 anos nos cursos de Direito e Ciências Humanas, co-fundadora e vice-presidente do Instituto Maria da Penha (IMP), ativista no enfrentamento à violência contra a mulher, gênero e racismo.",
+      "cargaHoraria": "A definir",
+      "data": "29/08/2026 às 15h",
+      "local": "A definir",
+      "vagas": "A definir",
+      "status": "aberta",
+      "link": "https://chat.whatsapp.com/DzOElMftjn0ICog0E8bhaW?s=cl&p=i&ilr=0"
+    }
+  ],
   "simposio": {
     "titulo": "SIMPÓSIO INFÂNCIA SEGURA 2026\nFonte das Águas",
     "subtitulo": "Um dia dedicado ao conhecimento, networking e transformação social",

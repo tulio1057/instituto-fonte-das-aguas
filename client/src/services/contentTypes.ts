@@ -60,6 +60,7 @@ export interface Capacitacao {
   local: string;
   vagas: string;
   status: "aberta" | "encerrada" | "em_breve";
+  link?: string;
 }
 
 export interface ProgramacaoItem {

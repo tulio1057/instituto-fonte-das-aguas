@@ -683,6 +683,12 @@ function SecaoCapacitacoes({
                   <Field label="Local" value={cap.local} onChange={(v) => update(i, "local", v)} />
                   <Field label="Vagas" value={cap.vagas} onChange={(v) => update(i, "vagas", v)} placeholder="ex: 30 vagas" />
                 </div>
+                <Field
+                  label="Link de inscrição"
+                  value={cap.link || ""}
+                  onChange={(v) => update(i, "link", v)}
+                  placeholder="ex: https://forms.gle/... ou link do grupo do WhatsApp"
+                />
                 <Field label="Descrição" value={cap.descricao} onChange={(v) => update(i, "descricao", v)} rows={3} />
               </div>
             )}
@@ -706,6 +712,7 @@ function SecaoCapacitacoes({
               local: "",
               vagas: "",
               status: "em_breve",
+              link: "",
             },
           ])
         }

@@ -146,7 +146,10 @@ export default function Capacitacoes() {
                       </div>
                       {cap.status === "aberta" && (
                         <a
-                          href="https://wa.me/5579996402118?text=Olá! Gostaria de me inscrever em uma capacitação."
+                          href={
+                            cap.link ||
+                            "https://wa.me/5579996402118?text=Olá! Gostaria de me inscrever em uma capacitação."
+                          }
                           target="_blank"
                           rel="noopener noreferrer"
                           className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-primary/90 transition-colors"
